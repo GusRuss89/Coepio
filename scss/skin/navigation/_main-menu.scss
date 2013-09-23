@@ -1,0 +1,178 @@
+/* === MOBILE MENU BUTTON === */
+#main-nav-btn {
+	padding: 8px 5%;
+	text-align: center;
+	i {
+		margin-right: 5px;
+		font-size: 1.1em;
+	}
+}
+
+/* === MAIN MENU === */
+// Some variables - ideally only change these and the things marked in the code
+$mm-sub-width: 250px;
+$mm-dark-border: rgba(0,0,0,0.2);
+$mm-light-border: rgba(255,255,255,0.075);
+$mm-fallback-border: lighten($darkest-grey, 5%);
+$mm-link-colour: $light-grey;
+$mm-link-size: 13;
+$mm-hover-bg-colour: $dark-grey;
+$mm-subs-hover-bg-colour: $darkest-grey;
+$mm-toplevel-a-padding: 14px 12px; // Two values (vertical, horizontal)
+$mm-toplevel-a-v-padding-mobile: 6px;
+$mm-toplevel-a-h-padding-mobile: 5%;
+$mm-subs-a-padding: 8px 20px;
+$mm-subs-a-v-padding-mobile: 4px;
+$mm-subs-mobile-indent-by: 2%;
+$mm-breakpoint: $bp-l;
+
+@include at-least($mm-breakpoint) {
+	#main-nav-wrap {
+		display: block !important;
+		overflow: visible !important;
+	}
+}
+.main-menu-bar {
+	position: relative;
+	z-index: 2;
+	.page-width {
+		background: $darkest-grey;
+	}
+	@include less-than($mm-breakpoint) {
+		.page-width {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+	ul.nav {
+		margin: 0;
+		@include at-least($mm-breakpoint) {
+			border-left: 1px solid $mm-fallback-border; // For older browsers
+			border-left: 1px solid $mm-dark-border;
+		}
+	}
+	li {
+		position: relative;
+		@include less-than($mm-breakpoint) {
+			width: 100%;
+			border-bottom: 1px solid $mm-dark-border;
+			border-top: 1px solid $mm-light-border;
+		}
+		@include at-least($mm-breakpoint) {
+			border-right: 1px solid $mm-fallback-border; // For older browsers
+			border-right: 1px solid $mm-dark-border;
+			border-left: 1px solid $mm-light-border;
+			float: left;
+		}
+		&:hover a {
+			background: $mm-hover-bg-colour;
+			text-decoration: none;
+		}
+		// Simulate border after last child
+		@include at-least($mm-breakpoint) {
+			&:last-child:after {
+				content: "";
+				position: absolute;
+				display: block;
+				width: 1px;
+				top: 0;
+				bottom: 0;
+				right: -2px;
+				background: $mm-light-border;
+			}
+		}
+	}
+	a {
+		@include font-size($mm-link-size);
+		color: $mm-link-colour;
+		padding: $mm-toplevel-a-v-padding-mobile $mm-toplevel-a-h-padding-mobile;
+		@include less-than($mm-breakpoint) {
+			display: block !important;
+		}
+		@include at-least($mm-breakpoint) {
+			padding: $mm-toplevel-a-padding;
+		}
+	}
+	// Level 2
+	li ul {
+		display: none;
+		background: $mm-hover-bg-colour;
+		margin: 0;
+		padding-left: 0;
+		@include at-least($mm-breakpoint) {
+			position: absolute;
+			z-index: 200;
+			top: auto;
+			left: 0;
+			width: $mm-sub-width;
+			@include box-shadow(0 1px 3px rgba(0,0,0,0.3)); // Another thing that might need changing
+		}
+		li {
+			margin: 0;
+			@include at-least($mm-breakpoint) {
+				width: $mm-sub-width;
+				border: none;
+				border-bottom: 1px solid $mm-fallback-border;
+				border-bottom: 1px solid $mm-dark-border;
+				border-top: 1px solid $mm-light-border;
+			}
+			@include less-than($mm-breakpoint) {
+				&:last-child {
+					border-bottom: none;
+				}
+				// Simulate a second top-border
+				&:first-child:after {
+					content: "";
+					position: absolute;
+					display: block;
+					height: 1px;
+					top: -2px;
+					left: 0;
+					right: 0;
+					background: $mm-dark-border;
+				}
+			}
+			&:after { 
+				display: none;
+			}
+			a {
+				display: block;
+				padding: $mm-subs-a-padding;
+				@include less-than($mm-breakpoint) {
+					padding: $mm-subs-a-v-padding-mobile $mm-toplevel-a-h-padding-mobile $mm-subs-a-v-padding-mobile ($mm-toplevel-a-h-padding-mobile + $mm-subs-mobile-indent-by);
+				}
+				&:hover {
+					background: $mm-subs-hover-bg-colour;
+				}
+			}
+			// Level 3
+			ul {
+				left: $mm-sub-width;
+				top: -1px;
+				z-index: 199;
+				@include less-than($mm-breakpoint) {
+					a {
+						padding: $mm-subs-a-v-padding-mobile $mm-toplevel-a-h-padding-mobile $mm-subs-a-v-padding-mobile ($mm-toplevel-a-h-padding-mobile + ($mm-subs-mobile-indent-by * 2));
+					}
+				}
+			}
+			&:hover ul {
+				display: block;
+			}
+		}
+	}
+	// Hide/show logic
+	li:hover {
+		ul {
+			display: block;
+			li {
+				ul {
+					display: none;
+				}
+				&:hover ul {
+					display: block;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.page-navigation {
+	text-align: center;
+	font-size: 1.1em;
+	color: $dark-grey;
+	ol {
+		@extend .nav;
+		display: inline-block;
+		width: auto;
+	}
+	li {
+		font-weight: bold;
+		display: inline-block;
+		padding: 0 4px;
+
+	}
+}

@@ -1,0 +1,10 @@
+a.post-title-link {
+	&:link,
+	&:visited {
+		color: $darkest-grey;
+	}
+	&:hover,
+	&:active {
+		color: $brand-colour;
+	}
+}

@@ -1,0 +1,70 @@
+a,
+a:link,
+a:visited {
+	color: $link-colour;
+	text-decoration: none;
+	@include transition(color, .2s);
+}
+a:hover,
+a:active {
+	color: $link-hover-colour;
+	//text-decoration: underline;
+}
+.feature-link {
+	display: block;
+	font-weight: bold;
+	margin-top: -($base-line-height * 0.66) + px;
+	&:after {
+		content: "";
+		position: relative;
+		width: 0;
+		height: 0;
+		@include box-sizing(padding-box);
+		display: inline-block;
+		border: 5px solid transparent;
+		border-left-color: $link-colour;
+		margin-left: 5px;
+	}
+	&:hover {
+		&:after {
+			border-left-color: $link-hover-colour;
+		}
+	}
+}
+a.img-link {
+	&:hover {
+		opacity: 0.8;
+	}
+}
+// Hover underline effect
+// This may not end up being practical
+/*
+.entry-content p,
+.sidebar p,
+.entry-content ul,
+.sidebar ul,
+.footer p,
+.footer ul,
+.page-title-layer {
+	a {
+		position: relative;
+		&:before {
+			content: "";
+			position: absolute;
+			display: block;
+			left: 0;
+			right: 0;
+			bottom: -5px;
+			height: 0;
+			border-top: 1px solid transparent;
+			@include transition(all .1s);
+		}
+		&:hover {
+			text-decoration: none;
+			&:before {
+				bottom: -1px;
+				border-color: $link-hover-colour;
+			}
+		}
+	}
+} */

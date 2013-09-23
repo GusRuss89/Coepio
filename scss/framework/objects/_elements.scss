@@ -1,0 +1,44 @@
+// Responsive images
+img {
+    max-width: 100%;
+    height: auto;
+}
+// This fixes IE8 height bug
+.lt-ie9 img {
+	width: auto;
+}
+
+// Wordpress image classes (change to use variables)
+img.alignright {
+	float: right;
+	margin: 0 0 $base-line-height + px $base-line-height + px;
+}
+img.alignleft {
+	float: left;
+	margin: 0 $base-line-height + px $base-line-height + px 0;
+}
+img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+}
+img.alignnone {
+	margin: 0 0 $base-line-height + px 0;
+}
+
+// Wells
+.well {
+	border: 1px solid $border-colour;
+	padding: $base-line-height * 0.75 + px;
+	@include border-radius($border-radius);
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
+// Horizontal Rule 
+hr {
+	height: 0;
+	border: 0;
+	border-top: 1px solid $border-colour;
+}

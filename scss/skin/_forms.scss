@@ -1,0 +1,132 @@
+/* Theme Specific Form Styles
+ * These extend the styles in the framework/objects/forms file
+ * Includes styling for Gravity Forms
+ */
+// === Variables === //
+// Non-full-width-field max-width
+$field-max-width: 380px;
+
+// === Gravity Forms List === //
+.gform_fields {
+	padding-left: 0;
+	list-style: none;
+}
+
+// === Vertical rhythm === //
+.form-item,
+.gform_fields > li {
+	margin-bottom: $base-line-height / 2 + px;
+}
+
+// === Labels === //
+label,
+.gform_label {
+
+}
+.ginput_complex label {
+	font-size: 0.9em;
+}
+
+// === Normal fields === //
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="file"] {
+	max-width: $field-max-width;
+	padding: 3px 8px;
+}
+textarea {
+	padding: 3px 8px;
+	height: 120px;
+}
+
+// === Checkboxes and radios === //
+.gfield_checkbox,
+.gfield_radio {
+	> li {
+		margin-bottom: 4px;
+	}
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin-right: 8px;
+	}
+}
+
+// === Complex fields === //
+// Date picker
+@import "../third-party/gforms-datepicker";
+.ginput_container {
+	position: relative;
+}
+input.datepicker_with_icon {
+	padding-left: 2.5em !important;
+}
+img.ui-datepicker-trigger {
+	position: absolute;
+	top: 7px;
+	left: 9px;
+}
+// Date Dropdowns
+.clear-multi {
+	@extend .cf;
+	max-width: $field-max-width;
+}
+.gfield_date_dropdown_month,
+.gfield_date_dropdown_day,
+.gfield_date_dropdown_year {
+	float: left;
+	width: 30.6%;
+	margin-right: 4%;
+}
+.gfield_date_dropdown_year {
+	margin-right: 0;
+}
+// Gravity forms side-by-side fields
+.ginput_complex {
+	@extend .cf;
+	.ginput_left,
+	.ginput_right {
+		display: block;
+		width: 48%;
+		float: left;
+	}
+	.ginput_right {
+		float: right;
+	}
+}
+
+// === Submit button(s) === //
+input[type="submit"].gform_button {
+	@extend .btn-large;
+	@extend .btn-cta;
+	padding-right: 1em;
+	margin-bottom: 0;
+	margin-top: 6px;
+}
+
+// === Required fields / error / success === //
+.gfield_required,
+.gfield_error .validation_message,
+.validation_error {
+	color: #d10f0f;
+}
+#gforms_confirmation_message {
+	color: #378a0f;
+}
+
+// Hide the gravity forms honeypot field
+.gform_validation_container {
+	display: none;
+	visibility: hidden;
+}

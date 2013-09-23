@@ -1,0 +1,22 @@
+/* 
+<ul class="nav">
+    <li><a>Link</a></li>
+</ul>
+*/
+.nav {
+    list-style:none;
+    margin-left:0;
+    margin-bottom: 0;
+    padding-left: 0;
+    @extend .cf;
+
+    > li{
+
+        &,
+        > a{
+            display:inline-block;
+            *display:inline;
+            zoom:1;
+        }
+    }
+}

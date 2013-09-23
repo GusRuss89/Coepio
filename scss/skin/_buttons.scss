@@ -1,0 +1,53 @@
+// To preserve vertical rhythm, buttons should be placed in a <p> tag, or in a <div class="flow">
+.button,
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.25em 1em;
+	@include border-radius($border-radius);
+	background: $dark-grey;
+	font-family: $alt-font;
+	color: #FFF; // For inputs
+	cursor: pointer; // Also for inputs
+	line-height: $relative-line-height; // Inputs again
+	-webkit-font-smoothing: antialiased; // Again, inputs
+	&:link,
+	&:visited {
+		color: #FFF; // Repeated here to override link colours
+	}
+	&:hover,
+	&:active {
+		background: $darkest-grey;
+		text-decoration: none;
+	}
+}
+.btn-large {
+	@extend .btn;
+	@include font-size($base-font-size + 4);
+}
+.btn-cta {
+	@extend .btn;
+	border: none;
+	background: $brand-colour;
+	position: relative;
+	padding-right: 2em;
+	color: #FFF;
+	&:link,
+	&:visited {
+		color: #FFF;
+	}
+	&:hover,
+	&:active {
+		background: darken($brand-colour, 10%);
+	}
+	&:before {
+		position: absolute;
+		content: "";
+		display: block;
+		right: .5em;
+		top: 50%;
+		margin-top: -5px;
+		border: 5px solid transparent;
+		border-left-color: #FFF;
+	}
+}

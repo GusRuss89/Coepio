@@ -1,0 +1,41 @@
+// Feature Layer
+.home-feature-layer {
+	@include at-least($bp-m) {
+		padding: 0;
+		.page-width {
+			position: relative;
+			height: 390px;
+		}
+		.feature-overlay {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 15px;
+		}
+		.sub-title {
+			max-width: 65%;
+		}
+	}
+}
+.home-cta-box {
+	@include at-least($bp-l) {
+		padding-top: 10px;
+	}
+	@include at-least($bp-xl) {
+		padding-top: 40px;
+	}
+}
+
+// Boxes layer
+.home-boxes-layer {
+	background: $lightest-grey;
+	padding: $base-line-height * 1.33 + px 0 $base-line-height * 0.33;
+	padding: ($base-line-height / 10) * 1.33 + rem 0 ($base-line-height / 10) * 0.33 + rem;
+	border-bottom: 1px solid $light-grey;
+	.widget {
+		margin-bottom: 0;
+	}
+	.widget-content {
+		background: #FFF;
+	}
+}

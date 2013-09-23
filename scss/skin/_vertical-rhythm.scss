@@ -1,0 +1,37 @@
+// Add theme specific vertical line-height selectors, but avoid changing the rules
+.flow, // Give vertical rhythm to anything (E.g. a form wrapper)
+p,
+ul,
+ol,
+hr,
+table,
+pre,
+.col,
+.well,
+.btn,
+.button,
+.feature-link,
+.validation_error,
+.feature-image,
+.media-img {
+	margin-bottom: $base-line-height + px;
+	margin-bottom: $base-line-height / 10 + rem;
+	margin-top: 0;
+}
+#{headings()},
+.h1, .h2, .h3, .h4, .h5, .h6,
+.byline {
+	margin-bottom: $base-line-height * 0.25 + px;
+	margin-bottom: ($base-line-height / 10) * 0.25 + rem;
+	margin-top: 0;
+}
+
+/* Fixes */
+.col > .well {
+	margin-bottom: 0;
+}
+
+/* Sidebar items should be spaced according to the grid, not typography */
+.widget {
+	margin-bottom: $gutter-width;
+}

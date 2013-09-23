@@ -1,0 +1,194 @@
+/* === TOP MENU === */
+// Some variables - ideally only change these and the things marked in the code
+$tm-sub-width: 200px;
+$tm-borders: false;
+$tm-borders-mobile: false;
+$tm-dark-border: rgba(0,0,0,0.1);
+$tm-light-border: rgba(255,255,255,0.1);
+$tm-fallback-border: $lightest-grey;
+$tm-link-colour: $grey;
+$tm-link-hover-colour: $dark-grey;
+$tm-hover-bg-colour: false;
+$tm-subs-bg-colour: $light-grey;
+$tm-subs-hover-bg-colour: $lightest-grey;
+$tm-toplevel-a-padding: 5px 18px; // Two values (vertical, horizontal)
+$tm-toplevel-a-v-padding-mobile: 6px;
+$tm-toplevel-a-h-padding-mobile: 20px;
+$tm-subs-a-padding: 5px 15px;
+$tm-subs-a-v-padding-mobile: 4px;
+$tm-subs-mobile-indent-by: 10px;
+$tm-breakpoint: $bp-m;
+
+.top-menu-bar {
+	background: $light-grey;
+	@include less-than($tm-breakpoint) {
+		display: none;
+		.page-width {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+// End custom
+.top-menu {
+	float: left;
+	width: auto;
+	background: $light-grey;
+	position: relative;
+	ul.nav {
+		margin: 0;
+		@include at-least($tm-breakpoint) {
+			@if $tm-borders != false {
+				border-left: 1px solid $tm-fallback-border; // For older browsers
+				border-left: 1px solid $tm-dark-border;
+			}
+		}
+	}
+	li {
+		position: relative;
+		@include less-than($tm-breakpoint) {
+			width: 100%;
+			@if $tm-borders-mobile != false {
+				border-bottom: 1px solid $tm-dark-border;
+				border-top: 1px solid $tm-light-border;
+			}
+		}
+		@include at-least($tm-breakpoint) {
+			@if $tm-borders != false {
+				border-right: 1px solid $tm-fallback-border; // For older browsers
+				border-right: 1px solid $tm-dark-border;
+				border-left: 1px solid $tm-light-border;
+			}
+			float: left;
+		}
+		&:hover a {
+			@if $tm-hover-bg-colour != false {
+				background: $tm-hover-bg-colour;
+			}
+			color: $tm-link-hover-colour;
+			text-decoration: none;
+		}
+		// Simulate border after last child
+		@if $tm-borders != false {
+			@include at-least($tm-breakpoint) {
+				&:last-child:after {
+					content: "";
+					position: absolute;
+					display: block;
+					width: 1px;
+					top: 0;
+					bottom: 0;
+					right: -2px;
+					background: $tm-light-border;
+				}
+			}
+		}
+	}
+	a {
+		color: $tm-link-colour;
+		padding: $tm-toplevel-a-v-padding-mobile $tm-toplevel-a-h-padding-mobile;
+		@include less-than($tm-breakpoint) {
+			display: block !important;
+		}
+		@include at-least($tm-breakpoint) {
+			padding: $tm-toplevel-a-padding;
+		}
+	}
+	// Level 2
+	li ul {
+		display: none;
+		background: $tm-subs-bg-colour;
+		margin: 0;
+		padding-left: 0;
+		@include at-least($tm-breakpoint) {
+			position: absolute;
+			z-index: 200;
+			top: auto;
+			left: 0;
+			width: $tm-sub-width;
+			@include box-shadow(0 1px 3px rgba(0,0,0,0.3)); // Another thing that might need changing
+		}
+		li {
+			margin: 0;
+			@include at-least($tm-breakpoint) {
+				width: $tm-sub-width;
+				border: none;
+				@if $tm-borders != false {
+					border-bottom: 1px solid $tm-fallback-border;
+					border-bottom: 1px solid $tm-dark-border;
+					border-top: 1px solid $tm-light-border;
+				}
+			}
+			@include less-than($tm-breakpoint) {
+				&:last-child {
+					border-bottom: none;
+				}
+				// Simulate a second top-border
+				@if $tm-borders-mobile != false {
+					&:first-child:after {
+						content: "";
+						position: absolute;
+						display: block;
+						height: 1px;
+						top: -2px;
+						left: 0;
+						right: 0;
+						background: $tm-dark-border;
+					}
+				}
+			}
+			&:after { 
+				display: none;
+			}
+			a {
+				display: block;
+				padding: $tm-subs-a-padding;
+				@include less-than($tm-breakpoint) {
+					padding: $tm-subs-a-v-padding-mobile $tm-toplevel-a-h-padding-mobile $tm-subs-a-v-padding-mobile ($tm-toplevel-a-h-padding-mobile + $tm-subs-mobile-indent-by);
+				}
+				&:hover {
+					background: $tm-subs-hover-bg-colour;
+				}
+			}
+			// Level 3
+			ul {
+				left: $tm-sub-width;
+				top: -1px;
+				z-index: 199;
+				@include less-than($tm-breakpoint) {
+					a {
+						padding: $tm-subs-a-v-padding-mobile $tm-toplevel-a-h-padding-mobile $tm-subs-a-v-padding-mobile ($tm-toplevel-a-h-padding-mobile + ($tm-subs-mobile-indent-by * 2));
+					}
+				}
+			}
+			&:hover ul {
+				display: block;
+			}
+		}
+	}
+	// Hide/show logic
+	li:hover {
+		ul {
+			display: block;
+			li {
+				ul {
+					display: none;
+				}
+				&:hover ul {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+// Footer version of top menu -> extends the top menu styles
+.footer-menu {
+	border-top: 1px solid $grey;
+	@include at-least($tm-breakpoint) {
+		display: none;
+	}
+	.top-menu {
+		float: none;
+	}
+}

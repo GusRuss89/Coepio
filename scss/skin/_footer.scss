@@ -1,0 +1,40 @@
+.footer {
+	color: $light-grey;
+	border-top: 3px solid $dark-grey;
+	background: $darkest-grey;
+	position: relative;
+	@include font-size(13);
+	.page-width {
+		padding: $base-line-height + px 0;
+	}
+	.col {
+		margin-bottom: 0; 
+	}
+}
+.copyright {
+	margin-bottom: 0;
+}
+.footer-nav {
+	margin: 0;
+	@include at-least($bp-m) {
+		text-align: right;
+	}
+	li {
+		padding-right: 8px;
+		border-right: 1px solid $dark-grey;
+		margin-right: 6px;
+		line-height: 1.1;
+		&:last-child {
+			border-right: none;
+		}
+	}
+	a {
+		color: $grey;
+		&:hover {
+			color: darken($light-grey, 15%);
+			&:after {
+				border-top-color: darken($dark-grey, 15%);
+			}
+		}
+	}
+}

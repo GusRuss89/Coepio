@@ -1,0 +1,65 @@
+/* Set up the variables for this skin */
+
+/* === TYPOGRAPHY === */
+// Fonts
+$base-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$alt-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$base-font-size: 13;
+$relative-line-height: 1.6;
+$base-line-height: $base-font-size * $relative-line-height;
+
+// Headings
+$h1-size: 32;
+$h2-size: 26;
+$h3-size: 22;
+$h4-size: 17;
+$h5-size: 16;
+$h6-size: $base-font-size;
+
+/* === COLOURS === */
+
+// Brand - Use these sparingly, try to use $brand-colour or $alt-colour instead
+$pep-red: #ee2e24;
+
+$brand-colour: $pep-red;
+$alt-colour: $pep-red;
+
+// Gradients
+$default-gradient-top: $brand-colour;
+$default-gradient-bottom: darken($brand-colour, 5%);
+
+// Greys
+$lightest-grey: #f3f1f2;
+$light-grey: #e3e1e2;
+$grey: #a29e9f;
+$dark-grey: #575253;
+$darkest-grey: #231f20;
+
+// Fonts
+$text-colour: #797374;
+$heading-colour: $darkest-grey;
+
+// Links
+$link-colour: $brand-colour;
+$link-hover-colour: darken($brand-colour, 10%);
+
+/* === BREAKPOINTS === */
+$bp-xs: 480px;
+$bp-s: 600px;
+$bp-m: 768px;
+$bp-l: 940px;
+$bp-xl: 1120px;
+$bp-xxl: 1300px;
+
+// Which breakpoint affects the sidebar
+$sidebar-bp: $bp-l;
+
+/* === GRID === */
+$page-width: 1050px;
+$gutter-width: 38px;
+$tight-gutter-width: 4px;
+
+/* === ELEMENTS === */
+// Borders
+$border-colour: #c3c7ca;
+$border-radius: 0;

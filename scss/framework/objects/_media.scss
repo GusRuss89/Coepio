@@ -1,0 +1,15 @@
+.media{ 
+    display:block;
+    @extend .cf;
+}
+.media-img {
+    float: left;
+    margin-right: $gutter-width;
+}
+.media-body {
+    overflow: hidden;
+}
+.media-body,
+.media-body > :last-child {
+    margin-bottom: 0;
+}

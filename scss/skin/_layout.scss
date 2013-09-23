@@ -1,0 +1,53 @@
+/* 
+ * Rather than changing the classes throughout the theme,
+ * do it here by extending the semantic classes within the theme
+ * with grid classes. Unfortunately you can't extend within the media query,
+ * no biggie, all those classes have is an easily calculable width.
+ */
+
+/* === CONTENT LAYOUTS === */
+ // Default - Right Sidebar
+.main-col {
+	@extend .col;
+	@include at-least($bp-l) {
+		width: 66.66%; // Three Quarters
+		float: left;
+	}
+}
+.sidebar {
+	@extend .col;
+	@include at-least($bp-l) {
+		width: 33.33%; // One Quarter
+		float: right;
+		clear: right;
+	}
+}
+#submenu {
+	@include at-least($bp-l) {
+		margin-bottom: 0;
+	}
+}
+
+// Left Sidebar
+.left-sidebar {
+	@include at-least($bp-l) {
+		.main-col {
+			float: right;
+		}
+		.sidebar {
+			float: left;
+			clear: left;
+		}
+	}
+}
+
+// No Sidebar
+.full-width .main-col {
+	width: 100%;
+	float: none;
+}
+
+/* === MAIN LAYER === */
+.main-layer {
+	padding: $base-line-height * 1.5 + px 0;
+}

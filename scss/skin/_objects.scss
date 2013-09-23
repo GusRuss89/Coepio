@@ -1,0 +1,32 @@
+/* A file for reusable classes that are part of the skin.
+E.g. .entry-item - vertically space these things and include a bottom border */
+
+// An entry in a list
+.entry-item {
+	/* Elements inside the item should take care of padding */
+	border-bottom: 1px solid $light-grey;
+	margin-bottom: $base-line-height + px;
+	margin-bottom: ($base-line-height / 10) + rem;
+	/* Except on media entry-items */
+	&.media {
+		padding-bottom: $base-line-height + px;
+		padding-bottom: ($base-line-height / 10) + rem;
+	}
+	&.spaced {
+		padding-bottom: $base-line-height * 0.66 + px;
+		padding-bottom: ($base-line-height / 10) * 0.66 + rem;
+		margin-bottom: $base-line-height * 1.66 + px;
+		margin-bottom: ($base-line-height / 10) * 1.66 + rem;
+	}
+	&:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+}
+
+// Byline - used underneath headings.
+// E.g. the meta of a blog post (in a list of posts), or a person's title under their name
+.byline {
+	color: $brand-colour;
+	margin-top: -0.5em; // A bit sketchy, but moves it up closer to the title
+}

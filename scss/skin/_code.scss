@@ -1,0 +1,22 @@
+pre {
+	border: 1px solid $border-colour;
+	overflow: auto;
+	padding: 0 2em;
+	line-height: 2em;
+	font-size: 12px;
+	@include background-image(linear-gradient(rgba(0, 0, 0, .05) 50%, transparent 50%, transparent));
+	@include background-size(100% 4em);
+	font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
+	@include transition(all ease-in-out 0.5s);
+	position: relative;
+	left: 0;
+	text-transform: none;
+	code {
+		background-color: transparent;
+	}
+}
+code {
+	//font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
+	background-color: lightyellow; // Thanks CSS Tricks :)
+	color: #666;
+}
