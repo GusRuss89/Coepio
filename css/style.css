@@ -4302,14 +4302,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 13, ../scss/skin/_base.scss */
-.page-width {
-  width: 90%;
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* line 16, ../scss/skin/_vertical-rhythm.scss */
 .flow,
 p,
@@ -5873,6 +5865,15 @@ input[type="submit"].gform_button {
   color: #ee2e24;
 }
 
+/* === PAGE WIDTH === */
+/* line 2, ../scss/skin/_layout.scss */
+.page-width {
+  width: 90%;
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* 
  * Rather than changing the classes throughout the theme,
  * do it here by extending the semantic classes within the theme
@@ -5881,7 +5882,7 @@ input[type="submit"].gform_button {
  */
 /* === CONTENT LAYOUTS === */
 @media screen and (min-width: 940px) {
-  /* line 10, ../scss/skin/_layout.scss */
+  /* line 18, ../scss/skin/_layout.scss */
   .main-col {
     width: 66.66%;
     float: left;
@@ -5889,7 +5890,7 @@ input[type="submit"].gform_button {
 }
 
 @media screen and (min-width: 940px) {
-  /* line 17, ../scss/skin/_layout.scss */
+  /* line 25, ../scss/skin/_layout.scss */
   .sidebar {
     width: 33.33%;
     float: right;
@@ -5898,32 +5899,32 @@ input[type="submit"].gform_button {
 }
 
 @media screen and (min-width: 940px) {
-  /* line 25, ../scss/skin/_layout.scss */
+  /* line 33, ../scss/skin/_layout.scss */
   #submenu {
     margin-bottom: 0;
   }
 }
 
 @media screen and (min-width: 940px) {
-  /* line 34, ../scss/skin/_layout.scss */
+  /* line 42, ../scss/skin/_layout.scss */
   .left-sidebar .main-col {
     float: right;
   }
-  /* line 37, ../scss/skin/_layout.scss */
+  /* line 45, ../scss/skin/_layout.scss */
   .left-sidebar .sidebar {
     float: left;
     clear: left;
   }
 }
 
-/* line 45, ../scss/skin/_layout.scss */
+/* line 53, ../scss/skin/_layout.scss */
 .full-width .main-col {
   width: 100%;
   float: none;
 }
 
 /* === MAIN LAYER === */
-/* line 51, ../scss/skin/_layout.scss */
+/* line 59, ../scss/skin/_layout.scss */
 .main-layer {
   padding: 31.2px 0;
 }

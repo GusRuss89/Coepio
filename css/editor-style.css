@@ -4021,14 +4021,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* line 13, ../scss/skin/_base.scss */
-.page-width {
-  width: 90%;
-  max-width: 1050px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* line 16, ../scss/skin/_vertical-rhythm.scss */
 .flow,
 p,
