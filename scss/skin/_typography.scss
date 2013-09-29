@@ -1,27 +1,31 @@
+/**
+ * Typography. Edit as desired.
+ */
+
 /* === HEADINGS === */
 #{headings()},
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	color: $heading-colour;
 	font-weight: normal;
+	font-family: $alt-font;
 }
 h1, .h1 {
 	color: $brand-colour;
-	font-family: $alt-font;
 }
 h2, .h2 {
-	font-family: $alt-font;
+	
 }
 h3, .h3 {
-	font-family: $alt-font;
+	
 }
 h4, .h4 {
-	text-transform: uppercase;
+	
 }
 h5, .h5 {
-	text-transform: uppercase;
+	
 }
 h6, .h6 {
-	text-transform: uppercase;
+	
 }
 
 /* === BLOCKQUOTE === */
@@ -32,12 +36,8 @@ blockquote {
 }
 
 /* === LISTS === */
-ul {
-	list-style-type: disc;
-	padding-left: 2em;
-}
+ul,
 ol {
-	list-style-type: decimal;
 	padding-left: 2em;
 }
 

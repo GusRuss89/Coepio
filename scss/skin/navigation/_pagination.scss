@@ -1,14 +1,16 @@
-.page-navigation {
+/**
+ * A starting point for your pagination
+ */
+.pagination {
 	text-align: center;
 	font-size: 1.1em;
-	color: $dark-grey;
+	font-weight: bold;
 	ol {
 		@extend .nav;
 		display: inline-block;
 		width: auto;
 	}
 	li {
-		font-weight: bold;
 		display: inline-block;
 		padding: 0 4px;
 

@@ -1,25 +1,3 @@
-.banner {
-	padding: 20px 0 17px;
-	text-align: center;
-	@include at-least($bp-m) {
-		padding: 45px 0;
-		text-align: right;
-	}
-}
-.logo {
-	@include at-least($bp-m) {
-		float: left;
-	}
-}
-.site-description {
-	margin-top: 7px;
-	margin-bottom: 0;
-	color: $brand-colour;
-	font-weight: bold;
-	@include font-size(18);
-	@include at-least($bp-m) {
-		margin-top: 0;
-		line-height: 74px;
-		@include font-size(20);
-	}
-}
+/**
+ * A blank slate for your header/banner area
+ */

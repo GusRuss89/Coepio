@@ -1,4 +1,8 @@
-/* Set up the variables for this skin */
+/**
+ * This is the most useful file in the framework.
+ * Set up the variables for this skin here.
+ * Feel free to add your own for use throughout.
+ */
 
 /* === TYPOGRAPHY === */
 // Fonts
@@ -17,18 +21,20 @@ $h5-size: 16;
 $h6-size: $base-font-size;
 
 /* === COLOURS === */
+// Brand - Add the brand colours by name here
+$brand-red: #ee2e24;
+$brand-blue: lightblue;
 
-// Brand - Use these sparingly, try to use $brand-colour or $alt-colour instead
-$pep-red: #ee2e24;
-
-$brand-colour: $pep-red;
-$alt-colour: $pep-red;
+// Primary colours
+$brand-colour: $brand-red;
+$alt-colour: $brand-blue;
 
 // Gradients
 $default-gradient-top: $brand-colour;
 $default-gradient-bottom: darken($brand-colour, 5%);
 
 // Greys
+// Tip: add a tinge of the primary colour to each shade of grey for a subtle design touch
 $lightest-grey: #f3f1f2;
 $light-grey: #e3e1e2;
 $grey: #a29e9f;

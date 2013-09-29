@@ -1,3 +1,10 @@
+/**
+ * Layout of major components.
+ * Define the layout(s) for your site here,
+ * E.g. full-width page, right sidebar, left sidebar,
+ * two sidebars etc.
+ */
+
 /* === PAGE WIDTH === */
 .page-width {
 	width: 90%;
@@ -7,38 +14,38 @@
 }
 
 /* 
- * Rather than changing the classes throughout the theme,
- * do it here by extending the semantic classes within the theme
- * with grid classes. Unfortunately you can't extend within the media query,
- * no biggie, all those classes have is an easily calculable width.
+ * Rather than changing the classes in the html,
+ * you can do it here by extending the semantic classes
+ * with grid classes. Unfortunately you can't extend 
+ * within the media query, no biggie, all those 
+ * classes have is an easily calculable width.
+ *
+ * I usually output a layout name class on an outer 
+ * wrapper and then adjust the inner panels (main col,
+ * sidebar etc) according to that outer class.
  */
 
 /* === CONTENT LAYOUTS === */
- // Default - Right Sidebar
+// Default (no layout class) - Right Sidebar
 .main-col {
 	@extend .col;
-	@include at-least($bp-l) {
+	@include at-least($sidebar-bp) {
 		width: 66.66%; // Three Quarters
 		float: left;
 	}
 }
 .sidebar {
 	@extend .col;
-	@include at-least($bp-l) {
+	@include at-least($sidebar-bp) {
 		width: 33.33%; // One Quarter
 		float: right;
 		clear: right;
 	}
 }
-#submenu {
-	@include at-least($bp-l) {
-		margin-bottom: 0;
-	}
-}
 
 // Left Sidebar
 .left-sidebar {
-	@include at-least($bp-l) {
+	@include at-least($sidebar-bp) {
 		.main-col {
 			float: right;
 		}
@@ -53,9 +60,4 @@
 .full-width .main-col {
 	width: 100%;
 	float: none;
-}
-
-/* === MAIN LAYER === */
-.main-layer {
-	padding: $base-line-height * 1.5 + px 0;
 }

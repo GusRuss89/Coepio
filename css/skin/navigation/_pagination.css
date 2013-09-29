@@ -1,0 +1,19 @@
+/**
+ * A starting point for your pagination
+ */
+/* line 4, ../../../scss/skin/navigation/_pagination.scss */
+.pagination {
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+/* line 8, ../../../scss/skin/navigation/_pagination.scss */
+.pagination ol {
+  display: inline-block;
+  width: auto;
+}
+/* line 13, ../../../scss/skin/navigation/_pagination.scss */
+.pagination li {
+  display: inline-block;
+  padding: 0 4px;
+}

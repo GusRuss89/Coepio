@@ -1,3 +1,12 @@
+/**
+ * Vertical rhythm. Try to avoid adding vertical
+ * margins to individual elements and add them
+ * here instead. It helps keep an even flow.
+ * Margins are spaced in only one direction (down),
+ * read about that here: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ */
+
+// The main rule.
 // Add theme specific vertical line-height selectors, but avoid changing the rules
 .flow, // Give vertical rhythm to anything (E.g. a form wrapper)
 p,
@@ -8,16 +17,13 @@ table,
 pre,
 .col,
 .well,
-.btn,
-.button,
-.feature-link,
-.validation_error,
-.feature-image,
+.btn, .button,
 .media-img {
 	margin-bottom: $base-line-height + px;
 	margin-bottom: $base-line-height / 10 + rem;
 	margin-top: 0;
 }
+// Headings have smaller bottom margins or they look a bit weird
 #{headings()},
 .h1, .h2, .h3, .h4, .h5, .h6,
 .byline {
@@ -26,12 +32,12 @@ pre,
 	margin-top: 0;
 }
 
-/* Fixes */
+// Fixes
 .col > .well {
 	margin-bottom: 0;
 }
 
-/* Sidebar items should be spaced according to the grid, not typography */
+// Sidebar items should be spaced according to the grid, not typography
 .widget {
 	margin-bottom: $gutter-width;
 }

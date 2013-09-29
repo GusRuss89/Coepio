@@ -580,7 +580,11 @@ dd {
 }
 
 /* === VARIABLES & MIXINS === */
-/* Set up the variables for this skin */
+/**
+ * This is the most useful file in the framework.
+ * Set up the variables for this skin here.
+ * Feel free to add your own for use throughout.
+ */
 /* === TYPOGRAPHY === */
 /* === COLOURS === */
 /* === BREAKPOINTS === */
@@ -2686,26 +2690,6 @@ img.alignnone {
   margin: 0 0 20.8px 0;
 }
 
-/* line 30, ../scss/framework/objects/_elements.scss */
-.well {
-  border: 1px solid #c3c7ca;
-  padding: 15.6px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-/* line 34, ../scss/framework/objects/_elements.scss */
-.well :last-child {
-  margin-bottom: 0;
-}
-
-/* line 40, ../scss/framework/objects/_elements.scss */
-hr {
-  height: 0;
-  border: 0;
-  border-top: 1px solid #c3c7ca;
-}
-
 /**
  * Grids are based on CSS Wizardry Grids, but have the option of using floated columns in
  * situations where you don't want to comment out whitespace (most of the time).
@@ -4005,23 +3989,34 @@ hr {
   }
 }
 /* === SKIN === */
-/* line 1, ../scss/skin/_base.scss */
+/**
+ * Nothing too special here, just some
+ * standard defaults. You probably won't need
+ * to change this up too much, but who knows...
+ */
+/* line 7, ../scss/skin/_base.scss */
 html {
   font-size: 62.5%;
   overflow-y: scroll;
   min-height: 100%;
 }
 
-/* line 6, ../scss/skin/_base.scss */
+/* line 12, ../scss/skin/_base.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 13px;
   line-height: 1.6;
   color: #797374;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* line 16, ../scss/skin/_vertical-rhythm.scss */
+/**
+ * Vertical rhythm. Try to avoid adding vertical
+ * margins to individual elements and add them
+ * here instead. It helps keep an even flow.
+ * Margins are spaced in only one direction (down),
+ * read about that here: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ */
+/* line 21, ../scss/skin/_vertical-rhythm.scss */
 .flow,
 p,
 ul,
@@ -4032,20 +4027,18 @@ pre,
 .col,
 .grid-item,
 .well,
+.well-tight,
 .btn,
+.btn-small,
 .btn-large,
-.btn-cta,
-.button,
-.feature-link,
-.validation_error,
-.feature-image,
+.btn-cta, .button,
 .media-img {
   margin-bottom: 20.8px;
   margin-bottom: 2.08rem;
   margin-top: 0;
 }
 
-/* line 23, ../scss/skin/_vertical-rhythm.scss */
+/* line 29, ../scss/skin/_vertical-rhythm.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 .byline {
@@ -4054,59 +4047,35 @@ h1, h2, h3, h4, h5, h6,
   margin-top: 0;
 }
 
-/* Fixes */
-/* line 30, ../scss/skin/_vertical-rhythm.scss */
-.col > .well, .grid-item > .well {
+/* line 36, ../scss/skin/_vertical-rhythm.scss */
+.col > .well, .grid-item > .well, .col > .well-tight, .grid-item > .well-tight {
   margin-bottom: 0;
 }
 
-/* Sidebar items should be spaced according to the grid, not typography */
-/* line 35, ../scss/skin/_vertical-rhythm.scss */
+/* line 41, ../scss/skin/_vertical-rhythm.scss */
 .widget {
   margin-bottom: 38px;
 }
 
+/**
+ * Typography. Edit as desired.
+ */
 /* === HEADINGS === */
-/* line 3, ../scss/skin/_typography.scss */
+/* line 7, ../scss/skin/_typography.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #231f20;
   font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-/* line 7, ../scss/skin/_typography.scss */
+/* line 12, ../scss/skin/_typography.scss */
 h1, .h1 {
   color: #ee2e24;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-/* line 11, ../scss/skin/_typography.scss */
-h2, .h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-/* line 14, ../scss/skin/_typography.scss */
-h3, .h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-/* line 17, ../scss/skin/_typography.scss */
-h4, .h4 {
-  text-transform: uppercase;
-}
-
-/* line 20, ../scss/skin/_typography.scss */
-h5, .h5 {
-  text-transform: uppercase;
-}
-
-/* line 23, ../scss/skin/_typography.scss */
-h6, .h6 {
-  text-transform: uppercase;
 }
 
 /* === BLOCKQUOTE === */
-/* line 28, ../scss/skin/_typography.scss */
+/* line 32, ../scss/skin/_typography.scss */
 blockquote {
   margin-left: 1em;
   margin-right: 1em;
@@ -4114,15 +4083,9 @@ blockquote {
 }
 
 /* === LISTS === */
-/* line 35, ../scss/skin/_typography.scss */
-ul {
-  list-style-type: disc;
-  padding-left: 2em;
-}
-
-/* line 39, ../scss/skin/_typography.scss */
+/* line 40, ../scss/skin/_typography.scss */
+ul,
 ol {
-  list-style-type: decimal;
   padding-left: 2em;
 }
 
@@ -4156,7 +4119,10 @@ ol {
   color: #ee2e24;
 }
 
-/* line 3, ../scss/skin/_links.scss */
+/**
+ * Links
+ */
+/* line 8, ../scss/skin/_links.scss */
 a,
 a:link,
 a:visited {
@@ -4168,19 +4134,19 @@ a:visited {
   transition: color, 0.2s;
 }
 
-/* line 9, ../scss/skin/_links.scss */
+/* line 14, ../scss/skin/_links.scss */
 a:hover,
 a:active {
   color: #cf1a10;
 }
 
-/* line 13, ../scss/skin/_links.scss */
+/* line 20, ../scss/skin/_links.scss */
 .feature-link {
   display: block;
   font-weight: bold;
   margin-top: -13.728px;
 }
-/* line 17, ../scss/skin/_links.scss */
+/* line 24, ../scss/skin/_links.scss */
 .feature-link:after {
   content: "";
   position: relative;
@@ -4194,184 +4160,53 @@ a:active {
   border-left-color: #ee2e24;
   margin-left: 5px;
 }
-/* line 29, ../scss/skin/_links.scss */
+/* line 36, ../scss/skin/_links.scss */
 .feature-link:hover:after {
   border-left-color: #cf1a10;
 }
 
-/* line 35, ../scss/skin/_links.scss */
+/* line 44, ../scss/skin/_links.scss */
 a.img-link:hover {
   opacity: 0.8;
 }
 
-/*
-.entry-content p,
-.sidebar p,
-.entry-content ul,
-.sidebar ul,
-.footer p,
-.footer ul,
-.page-title-layer {
-	a {
-		position: relative;
-		&:before {
-			content: "";
-			position: absolute;
-			display: block;
-			left: 0;
-			right: 0;
-			bottom: -5px;
-			height: 0;
-			border-top: 1px solid transparent;
-			@include transition(all .1s);
-		}
-		&:hover {
-			text-decoration: none;
-			&:before {
-				bottom: -1px;
-				border-color: $link-hover-colour;
-			}
-		}
-	}
-} */
 /**
- * CONTENTS
- **********************
- * WELL
- * SEARCH FORM
- * ACCORDION/TOGGLER
- * READ MORE TOGGLER
+ * Elements are reusable things like wells,
+ * horizontal rules, callout boxes, accordions/togglers,
+ * progress bars or anything that you'll use more than once in your site.
  */
-/* line 11, ../scss/skin/_elements.scss */
-.well {
+/* line 8, ../scss/skin/_elements.scss */
+.well, .well-tight {
+  padding: 20.8 20.8 0;
   background: #f3f1f2;
+  border: 1px solid #e3e1e2;
 }
 
-/* line 17, ../scss/skin/_elements.scss */
-.search-form {
-  background: #FFF;
-  border: 1px solid #a29e9f;
-  position: relative;
+/* line 13, ../scss/skin/_elements.scss */
+.well-tight {
+  padding: 5px;
 }
-/* line 21, ../scss/skin/_elements.scss */
-.search-form .s {
-  background: transparent;
-  border: none;
-  padding-right: 35px;
-  max-width: 100%;
-}
-/* line 27, ../scss/skin/_elements.scss */
-.search-form .search-submit {
-  position: absolute;
-  width: 30px;
-  right: -1px;
-  top: -1px;
-  bottom: -1px;
-  background: #ee2e24;
-  border: none;
-  text-align: center;
-  color: #FFF;
-  font-size: 19px;
-  font-size: 1.9rem;
-  vertical-align: middle;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  padding: 0;
-}
-/* line 41, ../scss/skin/_elements.scss */
-.search-form .search-submit i {
-  position: relative;
-  top: -1px;
-}
-/* line 45, ../scss/skin/_elements.scss */
-.search-form .search-submit:hover {
-  background: #575253;
-}
-
-/* line 52, ../scss/skin/_elements.scss */
-dl.toggler {
-  border-bottom: 1px solid #c3c7ca;
-  padding: 0;
-}
-/* line 55, ../scss/skin/_elements.scss */
-dl.toggler dt {
-  display: block;
-  border: 1px solid #c3c7ca;
-  border-bottom: none;
-  margin: 0;
-  position: relative;
-}
-/* line 61, ../scss/skin/_elements.scss */
-dl.toggler dt h3 {
-  margin: 0;
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-/* line 65, ../scss/skin/_elements.scss */
-dl.toggler dt a {
-  display: block;
-  padding: 6.864px 15.6px;
-}
-/* line 69, ../scss/skin/_elements.scss */
-dl.toggler dt i {
-  font-size: 0.8em;
-  margin-right: 7px;
-}
-/* line 74, ../scss/skin/_elements.scss */
-dl.toggler dd {
-  display: none;
-  border: 1px solid #c3c7ca;
-  padding: 15.6px;
-  background: #f3f1f2;
-  margin-bottom: 5px;
-  position: relative;
-}
-/* line 81, ../scss/skin/_elements.scss */
-dl.toggler dd:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-/* line 85, ../scss/skin/_elements.scss */
-dl.toggler dd :last-child {
-  margin-bottom: 0;
-}
-/* line 87, ../scss/skin/_elements.scss */
-dl.toggler dd :last-child :last-child {
+/* line 16, ../scss/skin/_elements.scss */
+.well-tight > :last-child {
   margin-bottom: 0;
 }
 
-/* line 95, ../scss/skin/_elements.scss */
-.toggle-this {
-  display: none;
+/* line 22, ../scss/skin/_elements.scss */
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #c3c7ca;
 }
 
-/* line 99, ../scss/skin/_elements.scss */
-.arrow-list {
-  margin-left: 5px;
-  list-style: none;
-}
-/* line 102, ../scss/skin/_elements.scss */
-.arrow-list li {
-  padding-left: 15px;
-  margin: 2px 0;
-  position: relative;
-}
-/* line 106, ../scss/skin/_elements.scss */
-.arrow-list li:before {
-  content: "";
-  display: inline-block;
-  border: 4px solid transparent;
-  border-left-color: #575253;
-  position: absolute;
-  top: 5px;
-  left: 0;
-}
-
-/* line 3, ../scss/skin/_buttons.scss */
+/**
+ * This should be a good starting point
+ * for however you want your buttons to look.
+ * Feel free to change what you like.
+ */
+/* line 9, ../scss/skin/_buttons.scss */
 .button,
 .btn,
+.btn-small,
 .btn-large,
 .btn-cta {
   display: inline-block;
@@ -4381,57 +4216,63 @@ dl.toggler dd :last-child :last-child {
   -moz-border-radius: 0;
   border-radius: 0;
   background: #575253;
+  border: none;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #FFF;
   cursor: pointer;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-/* line 15, ../scss/skin/_buttons.scss */
+/* line 22, ../scss/skin/_buttons.scss */
 .button:link, .button:visited,
 .btn:link,
+.btn-small:link,
 .btn-large:link,
 .btn-cta:link,
 .btn:visited,
+.btn-small:visited,
 .btn-large:visited,
 .btn-cta:visited {
   color: #FFF;
 }
-/* line 19, ../scss/skin/_buttons.scss */
+/* line 26, ../scss/skin/_buttons.scss */
 .button:hover, .button:active,
 .btn:hover,
+.btn-small:hover,
 .btn-large:hover,
 .btn-cta:hover,
 .btn:active,
+.btn-small:active,
 .btn-large:active,
 .btn-cta:active {
   background: #231f20;
   text-decoration: none;
 }
 
-/* line 24, ../scss/skin/_buttons.scss */
+/* line 32, ../scss/skin/_buttons.scss */
+.btn-small {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/* line 36, ../scss/skin/_buttons.scss */
 .btn-large {
   font-size: 17px;
   font-size: 1.7rem;
 }
 
-/* line 28, ../scss/skin/_buttons.scss */
+/* line 42, ../scss/skin/_buttons.scss */
 .btn-cta {
-  border: none;
   background: #ee2e24;
   position: relative;
   padding-right: 2em;
   color: #FFF;
 }
-/* line 36, ../scss/skin/_buttons.scss */
-.btn-cta:link, .btn-cta:visited {
-  color: #FFF;
-}
-/* line 40, ../scss/skin/_buttons.scss */
+/* line 49, ../scss/skin/_buttons.scss */
 .btn-cta:hover, .btn-cta:active {
   background: #cf1a10;
 }
-/* line 43, ../scss/skin/_buttons.scss */
+/* line 53, ../scss/skin/_buttons.scss */
 .btn-cta:before {
   position: absolute;
   content: "";
@@ -4443,15 +4284,17 @@ dl.toggler dd :last-child :last-child {
   border-left-color: #FFF;
 }
 
-/* line 1, ../scss/skin/_tables.scss */
+/**
+ * Tables. Edit as desired.
+ */
+/* line 5, ../scss/skin/_tables.scss */
 table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20.8;
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 9, ../scss/skin/_tables.scss */
+/* line 12, ../scss/skin/_tables.scss */
 table th,
 table td {
   padding: 8px;
@@ -4459,22 +4302,27 @@ table td {
   border-top: 1px solid #f3f1f2;
   text-align: left;
 }
-/* line 16, ../scss/skin/_tables.scss */
+/* line 19, ../scss/skin/_tables.scss */
 table th {
   font-weight: bold;
   color: #231f20;
 }
-/* line 21, ../scss/skin/_tables.scss */
+/* line 24, ../scss/skin/_tables.scss */
 table thead th {
   vertical-align: bottom;
 }
-/* line 24, ../scss/skin/_tables.scss */
+/* line 28, ../scss/skin/_tables.scss */
 table .row-title {
   color: #231f20;
   font-weight: bold;
 }
 
-/* line 1, ../scss/skin/_code.scss */
+/**
+ * Even if you don't think your site
+ * will include any code blocks, including this
+ * file makes debugging slightly prettier. 
+ */
+/* line 6, ../scss/skin/_code.scss */
 pre {
   border: 1px solid #c3c7ca;
   overflow: auto;
@@ -4491,22 +4339,18 @@ pre {
   -o-background-size: 100% 4em;
   background-size: 100% 4em;
   font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
-  -webkit-transition: all ease-in-out;
-  -webkit-transition-delay: 0.5s;
-  -moz-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
   position: relative;
   left: 0;
   text-transform: none;
 }
-/* line 14, ../scss/skin/_code.scss */
+/* line 18, ../scss/skin/_code.scss */
 pre code {
   background-color: transparent;
 }
 
-/* line 18, ../scss/skin/_code.scss */
+/* line 22, ../scss/skin/_code.scss */
 code {
+  font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
   background-color: lightyellow;
   color: #666;
 }

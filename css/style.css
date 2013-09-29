@@ -579,7 +579,11 @@ dd {
 }
 
 /* === VARIABLES & MIXINS === */
-/* Set up the variables for this skin */
+/**
+ * This is the most useful file in the framework.
+ * Set up the variables for this skin here.
+ * Feel free to add your own for use throughout.
+ */
 /* === TYPOGRAPHY === */
 /* === COLOURS === */
 /* === BREAKPOINTS === */
@@ -626,8 +630,7 @@ dd {
 /* line 6, ../scss/third-party/font-awesome/_core.scss */
 [class^="icon-"],
 [class*=" icon-"],
-.icon-class-to-extend,
-.social-media-links a:before {
+.icon-class-to-extend {
   font-family: FontAwesome;
   font-weight: normal;
   font-style: normal;
@@ -1402,12 +1405,12 @@ a [class*=" icon-"] {
 }
 
 /* line 129, ../scss/third-party/font-awesome/_icons.scss */
-.icon-twitter-sign:before, .social-media-links .twitter a:before {
+.icon-twitter-sign:before {
   content: "\f081";
 }
 
 /* line 130, ../scss/third-party/font-awesome/_icons.scss */
-.icon-facebook-sign:before, .social-media-links .facebook a:before {
+.icon-facebook-sign:before {
   content: "\f082";
 }
 
@@ -2263,7 +2266,7 @@ a [class*=" icon-"] {
 }
 
 /* line 306, ../scss/third-party/font-awesome/_icons.scss */
-.icon-rss-sign:before, .social-media-links .rss a:before {
+.icon-rss-sign:before {
   content: "\f143";
 }
 
@@ -2470,7 +2473,7 @@ a [class*=" icon-"] {
 }
 
 /* line 353, ../scss/third-party/font-awesome/_icons.scss */
-.icon-instagram:before, .social-media-links .instagram a:before {
+.icon-instagram:before {
   content: "\f16d";
 }
 
@@ -2684,26 +2687,6 @@ img.aligncenter {
 /* line 25, ../scss/framework/objects/_elements.scss */
 img.alignnone {
   margin: 0 0 20.8px 0;
-}
-
-/* line 30, ../scss/framework/objects/_elements.scss */
-.well {
-  border: 1px solid #c3c7ca;
-  padding: 15.6px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-}
-/* line 34, ../scss/framework/objects/_elements.scss */
-.well :last-child {
-  margin-bottom: 0;
-}
-
-/* line 40, ../scss/framework/objects/_elements.scss */
-hr {
-  height: 0;
-  border: 0;
-  border-top: 1px solid #c3c7ca;
 }
 
 /* line 6, ../scss/framework/objects/_forms.scss */
@@ -2953,16 +2936,15 @@ optgroup::-moz-focus-inner {
 </ul>
 */
 /* line 6, ../scss/framework/objects/_nav.scss */
-.nav, .page-navigation ol {
+.nav {
   list-style: none;
   margin-left: 0;
   margin-bottom: 0;
   padding-left: 0;
 }
 /* line 16, ../scss/framework/objects/_nav.scss */
-.nav > li, .page-navigation ol > li,
-.nav > li > a,
-.page-navigation ol > li > a {
+.nav > li,
+.nav > li > a {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -4150,16 +4132,16 @@ some cases may stretch layouts. So, we're just hiding it.
 }
 
 /* line 2, ../scss/framework/_helpers.scss */
-.cf, .media, .nav, .page-navigation ol, .grid, .ui-datepicker-title, .clear-multi, .ginput_complex, .social-media-links, .page-title-layer .page-width {
+.cf, .media, .nav, .grid, .ui-datepicker-title, .clear-multi, .ginput_complex {
   zoom: 1;
 }
 /* line 4, ../scss/framework/_helpers.scss */
-.cf:before, .media:before, .nav:before, .page-navigation ol:before, .grid:before, .ui-datepicker-title:before, .clear-multi:before, .ginput_complex:before, .social-media-links:before, .page-title-layer .page-width:before, .cf:after, .media:after, .nav:after, .page-navigation ol:after, .grid:after, .ui-datepicker-title:after, .clear-multi:after, .ginput_complex:after, .social-media-links:after, .page-title-layer .page-width:after {
+.cf:before, .media:before, .nav:before, .grid:before, .ui-datepicker-title:before, .clear-multi:before, .ginput_complex:before, .cf:after, .media:after, .nav:after, .grid:after, .ui-datepicker-title:after, .clear-multi:after, .ginput_complex:after {
   content: "";
   display: table;
 }
 /* line 5, ../scss/framework/_helpers.scss */
-.cf:after, .media:after, .nav:after, .page-navigation ol:after, .grid:after, .ui-datepicker-title:after, .clear-multi:after, .ginput_complex:after, .social-media-links:after, .page-title-layer .page-width:after {
+.cf:after, .media:after, .nav:after, .grid:after, .ui-datepicker-title:after, .clear-multi:after, .ginput_complex:after {
   clear: both;
 }
 
@@ -4286,23 +4268,34 @@ some cases may stretch layouts. So, we're just hiding it.
   }
 }
 /* === SKIN === */
-/* line 1, ../scss/skin/_base.scss */
+/**
+ * Nothing too special here, just some
+ * standard defaults. You probably won't need
+ * to change this up too much, but who knows...
+ */
+/* line 7, ../scss/skin/_base.scss */
 html {
   font-size: 62.5%;
   overflow-y: scroll;
   min-height: 100%;
 }
 
-/* line 6, ../scss/skin/_base.scss */
+/* line 12, ../scss/skin/_base.scss */
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 13px;
   line-height: 1.6;
   color: #797374;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* line 16, ../scss/skin/_vertical-rhythm.scss */
+/**
+ * Vertical rhythm. Try to avoid adding vertical
+ * margins to individual elements and add them
+ * here instead. It helps keep an even flow.
+ * Margins are spaced in only one direction (down),
+ * read about that here: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+ */
+/* line 21, ../scss/skin/_vertical-rhythm.scss */
 .flow,
 p,
 ul,
@@ -4315,21 +4308,19 @@ pre,
 .main-col,
 .sidebar,
 .well,
+.well-tight,
 .btn,
+.btn-small,
 .btn-large,
 input[type="submit"].gform_button,
-.btn-cta,
-.button,
-.feature-link,
-.validation_error,
-.feature-image,
+.btn-cta, .button,
 .media-img {
   margin-bottom: 20.8px;
   margin-bottom: 2.08rem;
   margin-top: 0;
 }
 
-/* line 23, ../scss/skin/_vertical-rhythm.scss */
+/* line 29, ../scss/skin/_vertical-rhythm.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6,
 .byline {
@@ -4338,21 +4329,23 @@ h1, h2, h3, h4, h5, h6,
   margin-top: 0;
 }
 
-/* Fixes */
-/* line 30, ../scss/skin/_vertical-rhythm.scss */
-.col > .well, .grid-item > .well, .main-col > .well, .sidebar > .well {
+/* line 36, ../scss/skin/_vertical-rhythm.scss */
+.col > .well, .grid-item > .well, .main-col > .well, .sidebar > .well, .col > .well-tight, .grid-item > .well-tight, .main-col > .well-tight, .sidebar > .well-tight {
   margin-bottom: 0;
 }
 
-/* Sidebar items should be spaced according to the grid, not typography */
-/* line 35, ../scss/skin/_vertical-rhythm.scss */
+/* line 41, ../scss/skin/_vertical-rhythm.scss */
 .widget {
   margin-bottom: 38px;
 }
 
-/* A file for reusable classes that are part of the skin.
-E.g. .entry-item - vertically space these things and include a bottom border */
-/* line 5, ../scss/skin/_objects.scss */
+/**
+ * A file for reusable classes that are part of the skin.
+ * E.g. .entry-item - vertically space these 'things' and include a bottom border.
+ * Feel free to delete what's here, but it's a good idea to include
+ * your own objects.
+ */
+/* line 9, ../scss/skin/_objects.scss */
 .entry-item {
   /* Elements inside the item should take care of padding */
   border-bottom: 1px solid #e3e1e2;
@@ -4360,71 +4353,49 @@ E.g. .entry-item - vertically space these things and include a bottom border */
   margin-bottom: 2.08rem;
   /* Except on media entry-items */
 }
-/* line 11, ../scss/skin/_objects.scss */
+/* line 15, ../scss/skin/_objects.scss */
 .entry-item.media {
   padding-bottom: 20.8px;
   padding-bottom: 2.08rem;
 }
-/* line 15, ../scss/skin/_objects.scss */
+/* line 19, ../scss/skin/_objects.scss */
 .entry-item.spaced {
   padding-bottom: 13.728px;
   padding-bottom: 1.3728rem;
   margin-bottom: 34.528px;
   margin-bottom: 3.4528rem;
 }
-/* line 21, ../scss/skin/_objects.scss */
+/* line 25, ../scss/skin/_objects.scss */
 .entry-item:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }
 
-/* line 29, ../scss/skin/_objects.scss */
+/* line 33, ../scss/skin/_objects.scss */
 .byline {
   color: #ee2e24;
   margin-top: -0.5em;
 }
 
+/**
+ * Typography. Edit as desired.
+ */
 /* === HEADINGS === */
-/* line 3, ../scss/skin/_typography.scss */
+/* line 7, ../scss/skin/_typography.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   color: #231f20;
   font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
-/* line 7, ../scss/skin/_typography.scss */
+/* line 12, ../scss/skin/_typography.scss */
 h1, .h1 {
   color: #ee2e24;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-/* line 11, ../scss/skin/_typography.scss */
-h2, .h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-/* line 14, ../scss/skin/_typography.scss */
-h3, .h3 {
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-}
-
-/* line 17, ../scss/skin/_typography.scss */
-h4, .h4 {
-  text-transform: uppercase;
-}
-
-/* line 20, ../scss/skin/_typography.scss */
-h5, .h5 {
-  text-transform: uppercase;
-}
-
-/* line 23, ../scss/skin/_typography.scss */
-h6, .h6 {
-  text-transform: uppercase;
 }
 
 /* === BLOCKQUOTE === */
-/* line 28, ../scss/skin/_typography.scss */
+/* line 32, ../scss/skin/_typography.scss */
 blockquote {
   margin-left: 1em;
   margin-right: 1em;
@@ -4432,15 +4403,9 @@ blockquote {
 }
 
 /* === LISTS === */
-/* line 35, ../scss/skin/_typography.scss */
-ul {
-  list-style-type: disc;
-  padding-left: 2em;
-}
-
-/* line 39, ../scss/skin/_typography.scss */
+/* line 40, ../scss/skin/_typography.scss */
+ul,
 ol {
-  list-style-type: decimal;
   padding-left: 2em;
 }
 
@@ -4474,7 +4439,10 @@ ol {
   color: #ee2e24;
 }
 
-/* line 3, ../scss/skin/_links.scss */
+/**
+ * Links
+ */
+/* line 8, ../scss/skin/_links.scss */
 a,
 a:link,
 a:visited {
@@ -4486,19 +4454,19 @@ a:visited {
   transition: color, 0.2s;
 }
 
-/* line 9, ../scss/skin/_links.scss */
+/* line 14, ../scss/skin/_links.scss */
 a:hover,
 a:active {
   color: #cf1a10;
 }
 
-/* line 13, ../scss/skin/_links.scss */
+/* line 20, ../scss/skin/_links.scss */
 .feature-link {
   display: block;
   font-weight: bold;
   margin-top: -13.728px;
 }
-/* line 17, ../scss/skin/_links.scss */
+/* line 24, ../scss/skin/_links.scss */
 .feature-link:after {
   content: "";
   position: relative;
@@ -4512,184 +4480,53 @@ a:active {
   border-left-color: #ee2e24;
   margin-left: 5px;
 }
-/* line 29, ../scss/skin/_links.scss */
+/* line 36, ../scss/skin/_links.scss */
 .feature-link:hover:after {
   border-left-color: #cf1a10;
 }
 
-/* line 35, ../scss/skin/_links.scss */
+/* line 44, ../scss/skin/_links.scss */
 a.img-link:hover {
   opacity: 0.8;
 }
 
-/*
-.entry-content p,
-.sidebar p,
-.entry-content ul,
-.sidebar ul,
-.footer p,
-.footer ul,
-.page-title-layer {
-	a {
-		position: relative;
-		&:before {
-			content: "";
-			position: absolute;
-			display: block;
-			left: 0;
-			right: 0;
-			bottom: -5px;
-			height: 0;
-			border-top: 1px solid transparent;
-			@include transition(all .1s);
-		}
-		&:hover {
-			text-decoration: none;
-			&:before {
-				bottom: -1px;
-				border-color: $link-hover-colour;
-			}
-		}
-	}
-} */
 /**
- * CONTENTS
- **********************
- * WELL
- * SEARCH FORM
- * ACCORDION/TOGGLER
- * READ MORE TOGGLER
+ * Elements are reusable things like wells,
+ * horizontal rules, callout boxes, accordions/togglers,
+ * progress bars or anything that you'll use more than once in your site.
  */
-/* line 11, ../scss/skin/_elements.scss */
-.well {
+/* line 8, ../scss/skin/_elements.scss */
+.well, .well-tight {
+  padding: 20.8 20.8 0;
   background: #f3f1f2;
+  border: 1px solid #e3e1e2;
 }
 
-/* line 17, ../scss/skin/_elements.scss */
-.search-form {
-  background: #FFF;
-  border: 1px solid #a29e9f;
-  position: relative;
+/* line 13, ../scss/skin/_elements.scss */
+.well-tight {
+  padding: 5px;
 }
-/* line 21, ../scss/skin/_elements.scss */
-.search-form .s {
-  background: transparent;
-  border: none;
-  padding-right: 35px;
-  max-width: 100%;
-}
-/* line 27, ../scss/skin/_elements.scss */
-.search-form .search-submit {
-  position: absolute;
-  width: 30px;
-  right: -1px;
-  top: -1px;
-  bottom: -1px;
-  background: #ee2e24;
-  border: none;
-  text-align: center;
-  color: #FFF;
-  font-size: 19px;
-  font-size: 1.9rem;
-  vertical-align: middle;
-  -webkit-transition: 0.2s;
-  -moz-transition: 0.2s;
-  -o-transition: 0.2s;
-  transition: 0.2s;
-  padding: 0;
-}
-/* line 41, ../scss/skin/_elements.scss */
-.search-form .search-submit i {
-  position: relative;
-  top: -1px;
-}
-/* line 45, ../scss/skin/_elements.scss */
-.search-form .search-submit:hover {
-  background: #575253;
-}
-
-/* line 52, ../scss/skin/_elements.scss */
-dl.toggler {
-  border-bottom: 1px solid #c3c7ca;
-  padding: 0;
-}
-/* line 55, ../scss/skin/_elements.scss */
-dl.toggler dt {
-  display: block;
-  border: 1px solid #c3c7ca;
-  border-bottom: none;
-  margin: 0;
-  position: relative;
-}
-/* line 61, ../scss/skin/_elements.scss */
-dl.toggler dt h3 {
-  margin: 0;
-  font-size: 16px;
-  font-size: 1.6rem;
-}
-/* line 65, ../scss/skin/_elements.scss */
-dl.toggler dt a {
-  display: block;
-  padding: 6.864px 15.6px;
-}
-/* line 69, ../scss/skin/_elements.scss */
-dl.toggler dt i {
-  font-size: 0.8em;
-  margin-right: 7px;
-}
-/* line 74, ../scss/skin/_elements.scss */
-dl.toggler dd {
-  display: none;
-  border: 1px solid #c3c7ca;
-  padding: 15.6px;
-  background: #f3f1f2;
-  margin-bottom: 5px;
-  position: relative;
-}
-/* line 81, ../scss/skin/_elements.scss */
-dl.toggler dd:last-child {
-  margin-bottom: 0;
-  border-bottom: none;
-}
-/* line 85, ../scss/skin/_elements.scss */
-dl.toggler dd :last-child {
-  margin-bottom: 0;
-}
-/* line 87, ../scss/skin/_elements.scss */
-dl.toggler dd :last-child :last-child {
+/* line 16, ../scss/skin/_elements.scss */
+.well-tight > :last-child {
   margin-bottom: 0;
 }
 
-/* line 95, ../scss/skin/_elements.scss */
-.toggle-this {
-  display: none;
+/* line 22, ../scss/skin/_elements.scss */
+hr {
+  height: 0;
+  border: 0;
+  border-top: 1px solid #c3c7ca;
 }
 
-/* line 99, ../scss/skin/_elements.scss */
-.arrow-list {
-  margin-left: 5px;
-  list-style: none;
-}
-/* line 102, ../scss/skin/_elements.scss */
-.arrow-list li {
-  padding-left: 15px;
-  margin: 2px 0;
-  position: relative;
-}
-/* line 106, ../scss/skin/_elements.scss */
-.arrow-list li:before {
-  content: "";
-  display: inline-block;
-  border: 4px solid transparent;
-  border-left-color: #575253;
-  position: absolute;
-  top: 5px;
-  left: 0;
-}
-
-/* line 3, ../scss/skin/_buttons.scss */
+/**
+ * This should be a good starting point
+ * for however you want your buttons to look.
+ * Feel free to change what you like.
+ */
+/* line 9, ../scss/skin/_buttons.scss */
 .button,
 .btn,
+.btn-small,
 .btn-large,
 input[type="submit"].gform_button,
 .btn-cta {
@@ -4700,31 +4537,36 @@ input[type="submit"].gform_button,
   -moz-border-radius: 0;
   border-radius: 0;
   background: #575253;
+  border: none;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #FFF;
   cursor: pointer;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
-/* line 15, ../scss/skin/_buttons.scss */
+/* line 22, ../scss/skin/_buttons.scss */
 .button:link, .button:visited,
 .btn:link,
+.btn-small:link,
 .btn-large:link,
 input[type="submit"].gform_button:link,
 .btn-cta:link,
 .btn:visited,
+.btn-small:visited,
 .btn-large:visited,
 input[type="submit"].gform_button:visited,
 .btn-cta:visited {
   color: #FFF;
 }
-/* line 19, ../scss/skin/_buttons.scss */
+/* line 26, ../scss/skin/_buttons.scss */
 .button:hover, .button:active,
 .btn:hover,
+.btn-small:hover,
 .btn-large:hover,
 input[type="submit"].gform_button:hover,
 .btn-cta:hover,
 .btn:active,
+.btn-small:active,
 .btn-large:active,
 input[type="submit"].gform_button:active,
 .btn-cta:active {
@@ -4732,29 +4574,30 @@ input[type="submit"].gform_button:active,
   text-decoration: none;
 }
 
-/* line 24, ../scss/skin/_buttons.scss */
+/* line 32, ../scss/skin/_buttons.scss */
+.btn-small {
+  font-size: 11px;
+  font-size: 1.1rem;
+}
+
+/* line 36, ../scss/skin/_buttons.scss */
 .btn-large, input[type="submit"].gform_button {
   font-size: 17px;
   font-size: 1.7rem;
 }
 
-/* line 28, ../scss/skin/_buttons.scss */
+/* line 42, ../scss/skin/_buttons.scss */
 .btn-cta, input[type="submit"].gform_button {
-  border: none;
   background: #ee2e24;
   position: relative;
   padding-right: 2em;
   color: #FFF;
 }
-/* line 36, ../scss/skin/_buttons.scss */
-.btn-cta:link, input[type="submit"].gform_button:link, .btn-cta:visited, input[type="submit"].gform_button:visited {
-  color: #FFF;
-}
-/* line 40, ../scss/skin/_buttons.scss */
+/* line 49, ../scss/skin/_buttons.scss */
 .btn-cta:hover, input[type="submit"].gform_button:hover, .btn-cta:active, input[type="submit"].gform_button:active {
   background: #cf1a10;
 }
-/* line 43, ../scss/skin/_buttons.scss */
+/* line 53, ../scss/skin/_buttons.scss */
 .btn-cta:before, input[type="submit"].gform_button:before {
   position: absolute;
   content: "";
@@ -4766,15 +4609,17 @@ input[type="submit"].gform_button:active,
   border-left-color: #FFF;
 }
 
-/* line 1, ../scss/skin/_tables.scss */
+/**
+ * Tables. Edit as desired.
+ */
+/* line 5, ../scss/skin/_tables.scss */
 table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: 20.8;
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* line 9, ../scss/skin/_tables.scss */
+/* line 12, ../scss/skin/_tables.scss */
 table th,
 table td {
   padding: 8px;
@@ -4782,22 +4627,27 @@ table td {
   border-top: 1px solid #f3f1f2;
   text-align: left;
 }
-/* line 16, ../scss/skin/_tables.scss */
+/* line 19, ../scss/skin/_tables.scss */
 table th {
   font-weight: bold;
   color: #231f20;
 }
-/* line 21, ../scss/skin/_tables.scss */
+/* line 24, ../scss/skin/_tables.scss */
 table thead th {
   vertical-align: bottom;
 }
-/* line 24, ../scss/skin/_tables.scss */
+/* line 28, ../scss/skin/_tables.scss */
 table .row-title {
   color: #231f20;
   font-weight: bold;
 }
 
-/* line 1, ../scss/skin/_code.scss */
+/**
+ * Even if you don't think your site
+ * will include any code blocks, including this
+ * file makes debugging slightly prettier. 
+ */
+/* line 6, ../scss/skin/_code.scss */
 pre {
   border: 1px solid #c3c7ca;
   overflow: auto;
@@ -4814,48 +4664,45 @@ pre {
   -o-background-size: 100% 4em;
   background-size: 100% 4em;
   font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
-  -webkit-transition: all ease-in-out;
-  -webkit-transition-delay: 0.5s;
-  -moz-transition: all ease-in-out 0.5s;
-  -o-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
   position: relative;
   left: 0;
   text-transform: none;
 }
-/* line 14, ../scss/skin/_code.scss */
+/* line 18, ../scss/skin/_code.scss */
 pre code {
   background-color: transparent;
 }
 
-/* line 18, ../scss/skin/_code.scss */
+/* line 22, ../scss/skin/_code.scss */
 code {
+  font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
   background-color: lightyellow;
   color: #666;
 }
 
-/* Theme Specific Form Styles
- * These extend the styles in the framework/objects/forms file
- * Includes styling for Gravity Forms
+/**
+ * Theme Specific Form Styles.
+ * These extend the styles in the framework/objects/forms file.
+ * Includes styling for Gravity Forms (a WordPress form plugin).
  */
-/* line 10, ../scss/skin/_forms.scss */
+/* line 12, ../scss/skin/_forms.scss */
 .gform_fields {
   padding-left: 0;
   list-style: none;
 }
 
-/* line 17, ../scss/skin/_forms.scss */
+/* line 19, ../scss/skin/_forms.scss */
 .form-item,
 .gform_fields > li {
   margin-bottom: 10.4px;
 }
 
-/* line 26, ../scss/skin/_forms.scss */
+/* line 28, ../scss/skin/_forms.scss */
 .ginput_complex label {
   font-size: 0.9em;
 }
 
-/* line 45, ../scss/skin/_forms.scss */
+/* line 47, ../scss/skin/_forms.scss */
 select,
 input[type="date"],
 input[type="datetime"],
@@ -4875,18 +4722,18 @@ input[type="file"] {
   padding: 3px 8px;
 }
 
-/* line 49, ../scss/skin/_forms.scss */
+/* line 51, ../scss/skin/_forms.scss */
 textarea {
   padding: 3px 8px;
   height: 120px;
 }
 
-/* line 57, ../scss/skin/_forms.scss */
+/* line 59, ../scss/skin/_forms.scss */
 .gfield_checkbox > li,
 .gfield_radio > li {
   margin-bottom: 4px;
 }
-/* line 61, ../scss/skin/_forms.scss */
+/* line 63, ../scss/skin/_forms.scss */
 .gfield_checkbox input[type="checkbox"],
 .gfield_checkbox input[type="radio"],
 .gfield_radio input[type="checkbox"],
@@ -5117,29 +4964,29 @@ td.ui-datepicker-unselectable.ui-state-disabled {
   background-color: #d7d7d7;
 }
 
-/* line 69, ../scss/skin/_forms.scss */
+/* line 71, ../scss/skin/_forms.scss */
 .ginput_container {
   position: relative;
 }
 
-/* line 72, ../scss/skin/_forms.scss */
+/* line 74, ../scss/skin/_forms.scss */
 input.datepicker_with_icon {
   padding-left: 2.5em !important;
 }
 
-/* line 75, ../scss/skin/_forms.scss */
+/* line 77, ../scss/skin/_forms.scss */
 img.ui-datepicker-trigger {
   position: absolute;
   top: 7px;
   left: 9px;
 }
 
-/* line 81, ../scss/skin/_forms.scss */
+/* line 83, ../scss/skin/_forms.scss */
 .clear-multi {
   max-width: 380px;
 }
 
-/* line 87, ../scss/skin/_forms.scss */
+/* line 89, ../scss/skin/_forms.scss */
 .gfield_date_dropdown_month,
 .gfield_date_dropdown_day,
 .gfield_date_dropdown_year {
@@ -5148,725 +4995,77 @@ img.ui-datepicker-trigger {
   margin-right: 4%;
 }
 
-/* line 92, ../scss/skin/_forms.scss */
+/* line 94, ../scss/skin/_forms.scss */
 .gfield_date_dropdown_year {
   margin-right: 0;
 }
 
-/* line 99, ../scss/skin/_forms.scss */
+/* line 101, ../scss/skin/_forms.scss */
 .ginput_complex .ginput_left,
 .ginput_complex .ginput_right {
   display: block;
   width: 48%;
   float: left;
 }
-/* line 104, ../scss/skin/_forms.scss */
+/* line 106, ../scss/skin/_forms.scss */
 .ginput_complex .ginput_right {
   float: right;
 }
 
-/* line 110, ../scss/skin/_forms.scss */
+/* line 112, ../scss/skin/_forms.scss */
 input[type="submit"].gform_button {
   padding-right: 1em;
   margin-bottom: 0;
   margin-top: 6px;
 }
 
-/* line 121, ../scss/skin/_forms.scss */
+/* line 123, ../scss/skin/_forms.scss */
 .gfield_required,
 .gfield_error .validation_message,
 .validation_error {
   color: #d10f0f;
 }
 
-/* line 124, ../scss/skin/_forms.scss */
+/* line 126, ../scss/skin/_forms.scss */
 #gforms_confirmation_message {
   color: #378a0f;
 }
 
-/* line 129, ../scss/skin/_forms.scss */
+/* line 131, ../scss/skin/_forms.scss */
 .gform_validation_container {
   display: none;
   visibility: hidden;
 }
 
-/* line 1, ../scss/skin/_header.scss */
-.banner {
-  padding: 20px 0 17px;
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  /* line 1, ../scss/skin/_header.scss */
-  .banner {
-    padding: 45px 0;
-    text-align: right;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  /* line 9, ../scss/skin/_header.scss */
-  .logo {
-    float: left;
-  }
-}
-
-/* line 14, ../scss/skin/_header.scss */
-.site-description {
-  margin-top: 7px;
-  margin-bottom: 0;
-  color: #ee2e24;
-  font-weight: bold;
-  font-size: 18px;
-  font-size: 1.8rem;
-}
-@media screen and (min-width: 768px) {
-  /* line 14, ../scss/skin/_header.scss */
-  .site-description {
-    margin-top: 0;
-    line-height: 74px;
-    font-size: 20px;
-    font-size: 2rem;
-  }
-}
-
-/* === MOBILE MENU BUTTON === */
-/* line 2, ../scss/skin/navigation/_main-menu.scss */
-#main-nav-btn {
-  padding: 8px 5%;
-  text-align: center;
-}
-/* line 5, ../scss/skin/navigation/_main-menu.scss */
-#main-nav-btn i {
-  margin-right: 5px;
-  font-size: 1.1em;
-}
-
-/* === MAIN MENU === */
-@media screen and (min-width: 940px) {
-  /* line 30, ../scss/skin/navigation/_main-menu.scss */
-  #main-nav-wrap {
-    display: block !important;
-    overflow: visible !important;
-  }
-}
-/* line 35, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar {
-  position: relative;
-  z-index: 2;
-}
-/* line 38, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar .page-width {
-  background: #231f20;
-}
-@media screen and (max-width: 939px) {
-  /* line 42, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar .page-width {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-/* line 47, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar ul.nav {
-  margin: 0;
-}
-@media screen and (min-width: 940px) {
-  /* line 47, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar ul.nav {
-    border-left: 1px solid #312b2c;
-    border-left: 1px solid rgba(0, 0, 0, 0.2);
-  }
-}
-/* line 54, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li {
-  position: relative;
-}
-@media screen and (max-width: 939px) {
-  /* line 54, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li {
-    width: 100%;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.075);
-  }
-}
-@media screen and (min-width: 940px) {
-  /* line 54, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li {
-    border-right: 1px solid #312b2c;
-    border-right: 1px solid rgba(0, 0, 0, 0.2);
-    border-left: 1px solid rgba(255, 255, 255, 0.075);
-    float: left;
-  }
-}
-/* line 67, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li:hover a {
-  background: #575253;
-  text-decoration: none;
-}
-@media screen and (min-width: 940px) {
-  /* line 73, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li:last-child:after {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 1px;
-    top: 0;
-    bottom: 0;
-    right: -2px;
-    background: rgba(255, 255, 255, 0.075);
-  }
-}
-/* line 85, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar a {
-  font-size: 13px;
-  font-size: 1.3rem;
-  color: #e3e1e2;
-  padding: 6px 5%;
-}
-@media screen and (max-width: 939px) {
-  /* line 85, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar a {
-    display: block !important;
-  }
-}
-@media screen and (min-width: 940px) {
-  /* line 85, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar a {
-    padding: 14px 12px;
-  }
-}
-/* line 97, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul {
-  display: none;
-  background: #575253;
-  margin: 0;
-  padding-left: 0;
-}
-@media screen and (min-width: 940px) {
-  /* line 97, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li ul {
-    position: absolute;
-    z-index: 200;
-    top: auto;
-    left: 0;
-    width: 250px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-}
-/* line 110, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul li {
-  margin: 0;
-}
-@media screen and (min-width: 940px) {
-  /* line 110, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li ul li {
-    width: 250px;
-    border: none;
-    border-bottom: 1px solid #312b2c;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    border-top: 1px solid rgba(255, 255, 255, 0.075);
-  }
-}
-@media screen and (max-width: 939px) {
-  /* line 120, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li ul li:last-child {
-    border-bottom: none;
-  }
-  /* line 124, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li ul li:first-child:after {
-    content: "";
-    position: absolute;
-    display: block;
-    height: 1px;
-    top: -2px;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.2);
-  }
-}
-/* line 135, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul li:after {
-  display: none;
-}
-/* line 138, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul li a {
-  display: block;
-  padding: 8px 20px;
-}
-@media screen and (max-width: 939px) {
-  /* line 138, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li ul li a {
-    padding: 4px 5% 4px 7%;
-  }
-}
-/* line 144, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul li a:hover {
-  background: #231f20;
-}
-/* line 149, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul li ul {
-  left: 250px;
-  top: -1px;
-  z-index: 199;
-}
-@media screen and (max-width: 939px) {
-  /* line 154, ../scss/skin/navigation/_main-menu.scss */
-  .main-menu-bar li ul li ul a {
-    padding: 4px 5% 4px 9%;
-  }
-}
-/* line 159, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li ul li:hover ul {
-  display: block;
-}
-/* line 166, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li:hover ul {
-  display: block;
-}
-/* line 169, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li:hover ul li ul {
-  display: none;
-}
-/* line 172, ../scss/skin/navigation/_main-menu.scss */
-.main-menu-bar li:hover ul li:hover ul {
-  display: block;
-}
-
-/* === TOP MENU === */
-/* line 22, ../scss/skin/navigation/_top-menu.scss */
-.top-menu-bar {
-  background: #e3e1e2;
-}
-@media screen and (max-width: 767px) {
-  /* line 22, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu-bar {
-    display: none;
-  }
-  /* line 26, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu-bar .page-width {
-    max-width: 100%;
-    width: 100%;
-  }
-}
-
-/* line 33, ../scss/skin/navigation/_top-menu.scss */
-.top-menu {
-  float: left;
-  width: auto;
-  background: #e3e1e2;
-  position: relative;
-}
-/* line 38, ../scss/skin/navigation/_top-menu.scss */
-.top-menu ul.nav {
-  margin: 0;
-}
-/* line 47, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li {
-  position: relative;
-}
-@media screen and (max-width: 767px) {
-  /* line 47, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li {
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) {
-  /* line 47, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li {
-    float: left;
-  }
-}
-/* line 64, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li:hover a {
-  color: #575253;
-  text-decoration: none;
-}
-/* line 87, ../scss/skin/navigation/_top-menu.scss */
-.top-menu a {
-  color: #a29e9f;
-  padding: 6px 20px;
-}
-@media screen and (max-width: 767px) {
-  /* line 87, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu a {
-    display: block !important;
-  }
-}
-@media screen and (min-width: 768px) {
-  /* line 87, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu a {
-    padding: 5px 18px;
-  }
-}
-/* line 98, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul {
-  display: none;
-  background: #e3e1e2;
-  margin: 0;
-  padding-left: 0;
-}
-@media screen and (min-width: 768px) {
-  /* line 98, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li ul {
-    position: absolute;
-    z-index: 200;
-    top: auto;
-    left: 0;
-    width: 200px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  }
-}
-/* line 111, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul li {
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  /* line 111, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li ul li {
-    width: 200px;
-    border: none;
-  }
-}
-@media screen and (max-width: 767px) {
-  /* line 123, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li ul li:last-child {
-    border-bottom: none;
-  }
-}
-/* line 140, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul li:after {
-  display: none;
-}
-/* line 143, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul li a {
-  display: block;
-  padding: 5px 15px;
-}
-@media screen and (max-width: 767px) {
-  /* line 143, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li ul li a {
-    padding: 4px 20px 4px 30px;
-  }
-}
-/* line 149, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul li a:hover {
-  background: #f3f1f2;
-}
-/* line 154, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul li ul {
-  left: 200px;
-  top: -1px;
-  z-index: 199;
-}
-@media screen and (max-width: 767px) {
-  /* line 159, ../scss/skin/navigation/_top-menu.scss */
-  .top-menu li ul li ul a {
-    padding: 4px 20px 4px 40px;
-  }
-}
-/* line 164, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li ul li:hover ul {
-  display: block;
-}
-/* line 171, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li:hover ul {
-  display: block;
-}
-/* line 174, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li:hover ul li ul {
-  display: none;
-}
-/* line 177, ../scss/skin/navigation/_top-menu.scss */
-.top-menu li:hover ul li:hover ul {
-  display: block;
-}
-
-/* line 186, ../scss/skin/navigation/_top-menu.scss */
-.footer-menu {
-  border-top: 1px solid #a29e9f;
-}
-@media screen and (min-width: 768px) {
-  /* line 186, ../scss/skin/navigation/_top-menu.scss */
-  .footer-menu {
-    display: none;
-  }
-}
-/* line 191, ../scss/skin/navigation/_top-menu.scss */
-.footer-menu .top-menu {
-  float: none;
-}
-
-/* line 1, ../scss/skin/navigation/_social-media-menu.scss */
-.social-media-links {
-  width: auto;
-  float: right;
-  text-align: right;
-  overflow: hidden;
-}
-/* line 7, ../scss/skin/navigation/_social-media-menu.scss */
-.social-media-links ul {
-  vertical-align: top;
-  line-height: 1;
-}
-/* line 11, ../scss/skin/navigation/_social-media-menu.scss */
-.social-media-links li {
-  float: left;
-  padding-top: 3px;
-}
-/* line 15, ../scss/skin/navigation/_social-media-menu.scss */
-.social-media-links a {
-  text-indent: -4999px;
-  text-align: left;
-  display: inline-block;
-  position: relative;
-  height: 28px;
-  width: 28px;
-}
-/* line 23, ../scss/skin/navigation/_social-media-menu.scss */
-.social-media-links a:before {
-  display: block;
-  text-indent: 0;
-  position: absolute;
-  top: 0;
-  font-size: 26px;
-  font-size: 2.6rem;
-  border: none !important;
-}
-
-/* line 1, ../scss/skin/navigation/_submenu.scss */
-#submenu {
-  margin-bottom: 0;
-}
-/* line 3, ../scss/skin/navigation/_submenu.scss */
-#submenu .widget {
-  margin-bottom: 20.8px;
-  margin-bottom: 2.08rem;
-}
-/* line 7, ../scss/skin/navigation/_submenu.scss */
-#submenu .widget-content {
-  display: none;
-}
-@media screen and (min-width: 940px) {
-  /* line 11, ../scss/skin/navigation/_submenu.scss */
-  #submenu .widget {
-    margin-bottom: 38px;
-  }
-  /* line 14, ../scss/skin/navigation/_submenu.scss */
-  #submenu .widget-content {
-    display: block !important;
-  }
-}
-/* line 18, ../scss/skin/navigation/_submenu.scss */
-#submenu ul {
-  margin-bottom: 0;
-}
-/* line 20, ../scss/skin/navigation/_submenu.scss */
-#submenu ul ul {
-  margin-top: 4px;
-  margin-left: 4px;
-}
-/* line 23, ../scss/skin/navigation/_submenu.scss */
-#submenu ul ul ul {
-  margin-top: 0;
-  margin-left: 12px;
-}
-/* line 29, ../scss/skin/navigation/_submenu.scss */
-#submenu li {
-  position: relative;
-  font-weight: bold;
-}
-/* line 32, ../scss/skin/navigation/_submenu.scss */
-#submenu li li {
-  padding-left: 10px;
-  font-weight: normal;
-}
-/* line 35, ../scss/skin/navigation/_submenu.scss */
-#submenu li li:before {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  border: 4px solid transparent;
-  border-left-color: #a29e9f;
-  left: 0;
-  top: 6px;
-}
-/* line 46, ../scss/skin/navigation/_submenu.scss */
-#submenu li.current-menu-item, #submenu li.current-page-item {
-  font-weight: bold !important;
-}
-
-/* line 56, ../scss/skin/navigation/_submenu.scss */
-#submenu-title h4 i {
-  margin-right: 5px;
-}
-@media screen and (min-width: 940px) {
-  /* line 56, ../scss/skin/navigation/_submenu.scss */
-  #submenu-title h4 i {
-    display: none;
-  }
-}
-
-/* line 1, ../scss/skin/navigation/_pagination.scss */
-.page-navigation {
-  text-align: center;
-  font-size: 1.1em;
-  color: #575253;
-}
-/* line 5, ../scss/skin/navigation/_pagination.scss */
-.page-navigation ol {
-  display: inline-block;
-  width: auto;
-}
-/* line 10, ../scss/skin/navigation/_pagination.scss */
-.page-navigation li {
-  font-weight: bold;
-  display: inline-block;
-  padding: 0 4px;
-}
-
+/**
+ * A blank slate for your header/banner area
+ */
+/**
+ * A blank slate for your footer styles.
+ */
+/**
+ * A blank slate for your main menu.
+ * Tip: start with the mobile menu styles,
+ * then use the 'at-least' mixin to switch to
+ * the desktop menu.
+ *
+ * E.g.
+ * .menu li {
+ *  	display: block;
+ *  	@include at-least($bp-m) {
+ *  		display: inline;
+ *  	}
+ * }
+ */
 /* === PAGE CONTENT === */
-/* line 1, ../scss/skin/_page-title.scss */
-.page-title-layer {
-  margin-top: -24px;
-  padding-top: 24px;
-  position: relative;
-  z-index: 1;
-  background: #e3e1e2;
-  border-top: 1px solid #e3e1e2;
-  border-bottom: 1px solid #cfccce;
-}
-/* line 12, ../scss/skin/_page-title.scss */
-.page-title-layer .page-width {
-  padding: 8.32px 0 20.8px 0;
-}
-/* line 16, ../scss/skin/_page-title.scss */
-.page-title-layer :last-child {
-  margin-bottom: 0;
-}
-@media screen and (min-width: 768px) {
-  /* line 1, ../scss/skin/_page-title.scss */
-  .page-title-layer {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #e3e1e2;
-  }
-  /* line 24, ../scss/skin/_page-title.scss */
-  .page-title-layer .page-width {
-    min-height: 160px;
-  }
-  /* line 27, ../scss/skin/_page-title.scss */
-  .page-title-layer.default {
-    background-image: url(../images/page-header-bg-default.jpg);
-  }
-  /* line 30, ../scss/skin/_page-title.scss */
-  .page-title-layer.home-feature-layer {
-    background-image: url(../images/home-page-banner.jpg);
-  }
-  /* line 33, ../scss/skin/_page-title.scss */
-  .page-title-layer.tdd {
-    background-image: url(../images/tdd-banner-2.jpg);
-  }
-  /* line 36, ../scss/skin/_page-title.scss */
-  .page-title-layer.projects {
-    background-image: url(../images/tdd-banner.jpg);
-  }
-  /* line 39, ../scss/skin/_page-title.scss */
-  .page-title-layer.news {
-    background-image: url(../images/news-banner.jpg);
-  }
-  /* line 42, ../scss/skin/_page-title.scss */
-  .page-title-layer.qs {
-    background-image: url(../images/qs-banner.jpg);
-  }
-  /* line 45, ../scss/skin/_page-title.scss */
-  .page-title-layer.dep {
-    background-image: url(../images/dep-banner.jpg);
-  }
-  /* line 48, ../scss/skin/_page-title.scss */
-  .page-title-layer.about-us {
-    background-image: url(../images/about-banner.jpg);
-  }
-  /* line 51, ../scss/skin/_page-title.scss */
-  .page-title-layer.team {
-    background-image: url(../images/team-banner.jpg);
-  }
-  /* line 54, ../scss/skin/_page-title.scss */
-  .page-title-layer.contact {
-    background-image: url(../images/contact-banner.jpg);
-  }
-}
-
-/* line 60, ../scss/skin/_page-title.scss */
-.page-title,
-.post-title {
-  margin-bottom: 0;
-  font-weight: bold;
-  color: #231f20;
-}
-@media screen and (min-width: 768px) {
-  /* line 60, ../scss/skin/_page-title.scss */
-  .page-title,
-  .post-title {
-    padding: 4px 15px;
-    background: #e3e1e2;
-    background: rgba(255, 255, 255, 0.65);
-    display: inline-block;
-    float: left;
-  }
-}
-
-/* line 72, ../scss/skin/_page-title.scss */
-.sub-title {
-  margin-bottom: 0;
-  color: #ee2e24;
-  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 20px;
-  font-size: 2rem;
-}
-@media screen and (min-width: 768px) {
-  /* line 72, ../scss/skin/_page-title.scss */
-  .sub-title {
-    padding: 4px 15px;
-    background: #e3e1e2;
-    background: rgba(255, 255, 255, 0.65);
-    display: inline-block;
-    float: left;
-    clear: left;
-    margin-top: 4px;
-  }
-}
-
-/* line 87, ../scss/skin/_page-title.scss */
-#breadcrumbs {
-  padding-left: 15px;
-  color: #e3e1e2;
-  display: none;
-  font-size: 13px;
-  font-size: 1.3rem;
-  margin: 0 0 8px;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.9);
-}
-@media screen and (min-width: 768px) {
-  /* line 87, ../scss/skin/_page-title.scss */
-  #breadcrumbs {
-    display: block;
-  }
-}
-/* line 97, ../scss/skin/_page-title.scss */
-#breadcrumbs a {
-  color: #FFF;
-  font-weight: bold;
-}
-/* line 100, ../scss/skin/_page-title.scss */
-#breadcrumbs a:hover {
-  color: #ee2e24;
-}
-
+/**
+ * Layout of major components.
+ * Define the layout(s) for your site here,
+ * E.g. full-width page, right sidebar, left sidebar,
+ * two sidebars etc.
+ */
 /* === PAGE WIDTH === */
-/* line 2, ../scss/skin/_layout.scss */
+/* line 9, ../scss/skin/_layout.scss */
 .page-width {
   width: 90%;
   max-width: 1050px;
@@ -5875,14 +5074,19 @@ input[type="submit"].gform_button {
 }
 
 /* 
- * Rather than changing the classes throughout the theme,
- * do it here by extending the semantic classes within the theme
- * with grid classes. Unfortunately you can't extend within the media query,
- * no biggie, all those classes have is an easily calculable width.
+ * Rather than changing the classes in the html,
+ * you can do it here by extending the semantic classes
+ * with grid classes. Unfortunately you can't extend 
+ * within the media query, no biggie, all those 
+ * classes have is an easily calculable width.
+ *
+ * I usually output a layout name class on an outer 
+ * wrapper and then adjust the inner panels (main col,
+ * sidebar etc) according to that outer class.
  */
 /* === CONTENT LAYOUTS === */
 @media screen and (min-width: 940px) {
-  /* line 18, ../scss/skin/_layout.scss */
+  /* line 30, ../scss/skin/_layout.scss */
   .main-col {
     width: 66.66%;
     float: left;
@@ -5890,7 +5094,7 @@ input[type="submit"].gform_button {
 }
 
 @media screen and (min-width: 940px) {
-  /* line 25, ../scss/skin/_layout.scss */
+  /* line 37, ../scss/skin/_layout.scss */
   .sidebar {
     width: 33.33%;
     float: right;
@@ -5899,51 +5103,32 @@ input[type="submit"].gform_button {
 }
 
 @media screen and (min-width: 940px) {
-  /* line 33, ../scss/skin/_layout.scss */
-  #submenu {
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (min-width: 940px) {
-  /* line 42, ../scss/skin/_layout.scss */
+  /* line 49, ../scss/skin/_layout.scss */
   .left-sidebar .main-col {
     float: right;
   }
-  /* line 45, ../scss/skin/_layout.scss */
+  /* line 52, ../scss/skin/_layout.scss */
   .left-sidebar .sidebar {
     float: left;
     clear: left;
   }
 }
 
-/* line 53, ../scss/skin/_layout.scss */
+/* line 60, ../scss/skin/_layout.scss */
 .full-width .main-col {
   width: 100%;
   float: none;
 }
 
-/* === MAIN LAYER === */
-/* line 59, ../scss/skin/_layout.scss */
-.main-layer {
-  padding: 31.2px 0;
-}
-
-/* line 1, ../scss/skin/pages/_page.scss */
-.feature-image img {
-  border: 1px solid #e3e1e2;
-  vertical-align: top;
-}
-
-/* line 3, ../scss/skin/pages/_posts.scss */
-a.post-title-link:link, a.post-title-link:visited {
-  color: #231f20;
-}
-/* line 7, ../scss/skin/pages/_posts.scss */
-a.post-title-link:hover, a.post-title-link:active {
-  color: #ee2e24;
-}
-
+/**
+ * A blank slate for your page styles.
+ * Include things like feature images, 
+ * title layout etc.
+ */
+/**
+ * A blank slate for post styles.
+ * Possibly not even necessary for your site...
+ */
 /* line 4, ../scss/skin/_sidebar.scss */
 .widget {
   background: #f3f1f2;
@@ -6056,130 +5241,9 @@ a.post-title-link:hover, a.post-title-link:active {
   vertical-align: top;
 }
 
-/* line 1, ../scss/skin/_footer.scss */
-.footer {
-  color: #e3e1e2;
-  border-top: 3px solid #575253;
-  background: #231f20;
-  position: relative;
-  font-size: 13px;
-  font-size: 1.3rem;
-}
-/* line 7, ../scss/skin/_footer.scss */
-.footer .page-width {
-  padding: 20.8px 0;
-}
-/* line 10, ../scss/skin/_footer.scss */
-.footer .col, .footer .grid-item, .footer .main-col, .footer .sidebar {
-  margin-bottom: 0;
-}
-
-/* line 14, ../scss/skin/_footer.scss */
-.copyright {
-  margin-bottom: 0;
-}
-
-/* line 17, ../scss/skin/_footer.scss */
-.footer-nav {
-  margin: 0;
-}
-@media screen and (min-width: 768px) {
-  /* line 17, ../scss/skin/_footer.scss */
-  .footer-nav {
-    text-align: right;
-  }
-}
-/* line 22, ../scss/skin/_footer.scss */
-.footer-nav li {
-  padding-right: 8px;
-  border-right: 1px solid #575253;
-  margin-right: 6px;
-  line-height: 1.1;
-}
-/* line 27, ../scss/skin/_footer.scss */
-.footer-nav li:last-child {
-  border-right: none;
-}
-/* line 31, ../scss/skin/_footer.scss */
-.footer-nav a {
-  color: #a29e9f;
-}
-/* line 33, ../scss/skin/_footer.scss */
-.footer-nav a:hover {
-  color: #beb9bc;
-}
-/* line 35, ../scss/skin/_footer.scss */
-.footer-nav a:hover:after {
-  border-top-color: #302d2d;
-}
-
-@media screen and (min-width: 768px) {
-  /* line 2, ../scss/skin/pages/_home.scss */
-  .home-feature-layer {
-    padding: 0;
-  }
-  /* line 5, ../scss/skin/pages/_home.scss */
-  .home-feature-layer .page-width {
-    position: relative;
-    height: 390px;
-  }
-  /* line 9, ../scss/skin/pages/_home.scss */
-  .home-feature-layer .feature-overlay {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 15px;
-  }
-  /* line 15, ../scss/skin/pages/_home.scss */
-  .home-feature-layer .sub-title {
-    max-width: 65%;
-  }
-}
-
-@media screen and (min-width: 940px) {
-  /* line 20, ../scss/skin/pages/_home.scss */
-  .home-cta-box {
-    padding-top: 10px;
-  }
-}
-@media screen and (min-width: 1120px) {
-  /* line 20, ../scss/skin/pages/_home.scss */
-  .home-cta-box {
-    padding-top: 40px;
-  }
-}
-
-/* line 30, ../scss/skin/pages/_home.scss */
-.home-boxes-layer {
-  background: #f3f1f2;
-  padding: 27.664px 0 6.864;
-  padding: 2.7664rem 0 0.6864rem;
-  border-bottom: 1px solid #e3e1e2;
-}
-/* line 35, ../scss/skin/pages/_home.scss */
-.home-boxes-layer .widget {
-  margin-bottom: 0;
-}
-/* line 38, ../scss/skin/pages/_home.scss */
-.home-boxes-layer .widget-content {
-  background: #FFF;
-}
-
-/* line 6, ../scss/skin/pages/_projects.scss */
-.projects img {
-  border: 1px solid #e3e1e2;
-}
-/* line 9, ../scss/skin/pages/_projects.scss */
-.projects .h4 {
-  margin-bottom: 0.1em !important;
-}
-/* line 11, ../scss/skin/pages/_projects.scss */
-.projects .h4 a {
-  color: #231f20;
-  font-weight: bold;
-  text-transform: none;
-}
-/* line 15, ../scss/skin/pages/_projects.scss */
-.projects .h4 a:hover {
-  color: #ee2e24;
-}
+/**
+ * A blank slate for your home page.
+ * Remember if you're using things like
+ * callout boxes or wells, define them in
+ * _elements.scss so you can use them elsewhere.
+ */

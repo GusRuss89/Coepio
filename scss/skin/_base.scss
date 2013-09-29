@@ -1,3 +1,9 @@
+/**
+ * Nothing too special here, just some
+ * standard defaults. You probably won't need
+ * to change this up too much, but who knows...
+ */
+
 html{
     font-size: 62.5%;
     overflow-y:scroll;
@@ -8,5 +14,5 @@ body {
 	font-size: $base-font-size + px;
 	line-height: $relative-line-height;
 	color: $text-colour;
-	-webkit-font-smoothing: antialiased;
+	// -webkit-font-smoothing: antialiased;
 }

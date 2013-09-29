@@ -55,16 +55,19 @@
 
 // Header
 @import "skin/header";
+
+// Footer
+@import "skin/footer";
+
 // Navigation
 @import "skin/navigation/main-menu";
-@import "skin/navigation/top-menu";
-@import "skin/navigation/social-media-menu";
-@import "skin/navigation/submenu";
-@import "skin/navigation/pagination";
+// Other navigation suggestions
+// @import "skin/navigation/top-menu";
+// @import "skin/navigation/social-media-menu";
+// @import "skin/navigation/submenu";
+// @import "skin/navigation/pagination";
 
 /* === PAGE CONTENT === */
-// Page Title
-@import "skin/page-title";
 // Layout
 @import "skin/layout";
 
@@ -77,12 +80,10 @@
 // Sidebar
 @import "skin/sidebar";
 
-// Footer
-@import "skin/footer";
-
 // Specific Pages
 @import "skin/pages/home";
-@import "skin/pages/projects";
+// Other examples: portfolio, news etc.
+// Make a new file for each in skin/pages/
 
 // Print styles
 @media print {

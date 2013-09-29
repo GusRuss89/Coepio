@@ -25,20 +25,3 @@ img.aligncenter {
 img.alignnone {
 	margin: 0 0 $base-line-height + px 0;
 }
-
-// Wells
-.well {
-	border: 1px solid $border-colour;
-	padding: $base-line-height * 0.75 + px;
-	@include border-radius($border-radius);
-	:last-child {
-		margin-bottom: 0;
-	}
-}
-
-// Horizontal Rule 
-hr {
-	height: 0;
-	border: 0;
-	border-top: 1px solid $border-colour;
-}
