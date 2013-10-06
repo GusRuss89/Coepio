@@ -1,3 +1,7 @@
+/**
+ * A few mixins used by the framework
+ */
+
 // Font size mixin
 @mixin font-size($sizeValue: 16) {
   font-size: ($sizeValue) + px;
@@ -5,19 +9,18 @@
 }
 
 // Media queries (http://css-tricks.com/naming-media-queries/)
-// Test this
 @mixin at-least($device-width) {
 	@media screen and (min-width: $device-width) {
-		@content 
+		@content;
 	}
 }
 @mixin less-than($device-width) {
 	@media screen and (max-width: $device-width - 1) {
-		@content 
+		@content;
 	}
 }
 
-// Gradients
+// Simple Gradients
 @mixin vertical-gradient($top: $default-gradient-top, $bottom: $default-gradient-bottom) {
 	background: $top;
 	@include background-image(linear-gradient($top, $bottom));

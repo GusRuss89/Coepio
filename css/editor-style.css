@@ -547,36 +547,23 @@ p {
 }
 
 /* line 517, ../scss/framework/_normalize.scss */
-b, strong, .strong {
+b, strong {
   font-weight: bold;
 }
 
 /* line 519, ../scss/framework/_normalize.scss */
-dfn, em, .em {
+dfn, em {
   font-style: italic;
 }
 
 /* line 521, ../scss/framework/_normalize.scss */
-small, .small {
+small {
   font-size: 75%;
 }
 
 /* line 523, ../scss/framework/_normalize.scss */
-ul, ol {
-  padding: 0;
-  list-style-type: none;
-}
-
-/* line 528, ../scss/framework/_normalize.scss */
 dd {
   margin: 0;
-}
-
-/* line 534, ../scss/framework/_normalize.scss */
-.sidebar ul,
-.sidebar ol,
-.commentlist {
-  list-style: none;
 }
 
 /* === VARIABLES & MIXINS === */
@@ -590,6 +577,9 @@ dd {
 /* === BREAKPOINTS === */
 /* === GRID === */
 /* === ELEMENTS === */
+/**
+ * A few mixins used by the framework
+ */
 /* === FONTS AND ICONS === */
 /*!
  *  Font Awesome 3.2.1
@@ -2619,6 +2609,7 @@ a [class*=" icon-"] {
 }
 
 /* === COEPIO FRAMEWORK === */
+/* Sizes are declared on their own here in extendable classes */
 /* line 2, ../scss/framework/objects/_headings.scss */
 h1, .h1 {
   font-size: 32px;
@@ -2746,1107 +2737,918 @@ img.alignnone {
   vertical-align: top;
 }
 
-/**
-* Whole
-*/
-/* line 61, ../scss/framework/objects/_grid.scss */
+/* line 60, ../scss/framework/objects/_grid.scss */
 .one-whole {
   width: 100%;
 }
 
-/**
-* Halves
-*/
-/* line 67, ../scss/framework/objects/_grid.scss */
+/* line 63, ../scss/framework/objects/_grid.scss */
 .one-half, .two-quarters, .three-sixths, .four-eighths, .five-tenths, .six-twelfths {
   width: 50%;
 }
 
-/**
-* Thirds
-*/
-/* line 73, ../scss/framework/objects/_grid.scss */
+/* line 66, ../scss/framework/objects/_grid.scss */
 .one-third, .two-sixths, .four-twelfths {
   width: 33.333%;
 }
 
-/* line 74, ../scss/framework/objects/_grid.scss */
+/* line 67, ../scss/framework/objects/_grid.scss */
 .two-thirds, .four-sixths, .eight-twelfths {
   width: 66.666%;
 }
 
-/**
-* Quarters
-*/
-/* line 80, ../scss/framework/objects/_grid.scss */
+/* line 70, ../scss/framework/objects/_grid.scss */
 .one-quarter, .two-eighths, .three-twelfths {
   width: 25%;
 }
 
-/* line 82, ../scss/framework/objects/_grid.scss */
+/* line 72, ../scss/framework/objects/_grid.scss */
 .three-quarters, .six-eighths, .nine-twelfths {
   width: 75%;
 }
 
-/**
-* Fifths
-*/
-/* line 88, ../scss/framework/objects/_grid.scss */
+/* line 75, ../scss/framework/objects/_grid.scss */
 .one-fifth, .two-tenths {
   width: 20%;
 }
 
-/* line 89, ../scss/framework/objects/_grid.scss */
+/* line 76, ../scss/framework/objects/_grid.scss */
 .two-fifths, .four-tenths {
   width: 40%;
 }
 
-/* line 90, ../scss/framework/objects/_grid.scss */
+/* line 77, ../scss/framework/objects/_grid.scss */
 .three-fifths, .six-tenths {
   width: 60%;
 }
 
-/* line 91, ../scss/framework/objects/_grid.scss */
+/* line 78, ../scss/framework/objects/_grid.scss */
 .four-fifths, .eight-tenths {
   width: 80%;
 }
 
-/**
-* Sixths
-*/
-/* line 97, ../scss/framework/objects/_grid.scss */
+/* line 81, ../scss/framework/objects/_grid.scss */
 .one-sixth, .two-twelfths {
   width: 16.666%;
 }
 
-/* line 101, ../scss/framework/objects/_grid.scss */
+/* line 85, ../scss/framework/objects/_grid.scss */
 .five-sixths, .ten-twelfths {
   width: 83.333%;
 }
 
-/**
-* Eighths
-*/
-/* line 107, ../scss/framework/objects/_grid.scss */
+/* line 88, ../scss/framework/objects/_grid.scss */
 .one-eighth {
   width: 12.5%;
 }
 
-/* line 109, ../scss/framework/objects/_grid.scss */
+/* line 90, ../scss/framework/objects/_grid.scss */
 .three-eighths {
   width: 37.5%;
 }
 
-/* line 111, ../scss/framework/objects/_grid.scss */
+/* line 92, ../scss/framework/objects/_grid.scss */
 .five-eighths {
   width: 62.5%;
 }
 
-/* line 113, ../scss/framework/objects/_grid.scss */
+/* line 94, ../scss/framework/objects/_grid.scss */
 .seven-eighths {
   width: 87.5%;
 }
 
-/**
-* Tenths
-*/
-/* line 119, ../scss/framework/objects/_grid.scss */
+/* line 97, ../scss/framework/objects/_grid.scss */
 .one-tenth {
   width: 10%;
 }
 
-/* line 121, ../scss/framework/objects/_grid.scss */
+/* line 99, ../scss/framework/objects/_grid.scss */
 .three-tenths {
   width: 30%;
 }
 
-/* line 125, ../scss/framework/objects/_grid.scss */
+/* line 103, ../scss/framework/objects/_grid.scss */
 .seven-tenths {
   width: 70%;
 }
 
-/* line 127, ../scss/framework/objects/_grid.scss */
+/* line 105, ../scss/framework/objects/_grid.scss */
 .nine-tenths {
   width: 90%;
 }
 
-/**
-* Twelfths
-*/
-/* line 133, ../scss/framework/objects/_grid.scss */
+/* line 108, ../scss/framework/objects/_grid.scss */
 .one-twelfth {
   width: 8.333%;
 }
 
-/* line 137, ../scss/framework/objects/_grid.scss */
+/* line 112, ../scss/framework/objects/_grid.scss */
 .five-twelfths {
   width: 41.666%;
 }
 
-/* line 139, ../scss/framework/objects/_grid.scss */
+/* line 114, ../scss/framework/objects/_grid.scss */
 .seven-twelfths {
   width: 58.333%;
 }
 
-/* line 143, ../scss/framework/objects/_grid.scss */
+/* line 118, ../scss/framework/objects/_grid.scss */
 .eleven-twelfths {
   width: 91.666%;
 }
 
-/* line 146, ../scss/framework/objects/_grid.scss */
+/* line 121, ../scss/framework/objects/_grid.scss */
 .first {
   clear: left;
 }
 
-/* line 155, ../scss/framework/objects/_grid.scss */
+/* line 130, ../scss/framework/objects/_grid.scss */
 .not-first {
   clear: none;
 }
 
 @media screen and (min-width: 480px) {
-  /**
-  * Whole
-  */
-  /* line 61, ../scss/framework/objects/_grid.scss */
+  /* line 60, ../scss/framework/objects/_grid.scss */
   .xs-one-whole {
     width: 100%;
   }
 
-  /**
-  * Halves
-  */
-  /* line 67, ../scss/framework/objects/_grid.scss */
+  /* line 63, ../scss/framework/objects/_grid.scss */
   .xs-one-half, .xs-two-quarters, .xs-three-sixths, .xs-four-eighths, .xs-five-tenths, .xs-six-twelfths {
     width: 50%;
   }
 
-  /**
-  * Thirds
-  */
-  /* line 73, ../scss/framework/objects/_grid.scss */
+  /* line 66, ../scss/framework/objects/_grid.scss */
   .xs-one-third, .xs-two-sixths, .xs-four-twelfths {
     width: 33.333%;
   }
 
-  /* line 74, ../scss/framework/objects/_grid.scss */
+  /* line 67, ../scss/framework/objects/_grid.scss */
   .xs-two-thirds, .xs-four-sixths, .xs-eight-twelfths {
     width: 66.666%;
   }
 
-  /**
-  * Quarters
-  */
-  /* line 80, ../scss/framework/objects/_grid.scss */
+  /* line 70, ../scss/framework/objects/_grid.scss */
   .xs-one-quarter, .xs-two-eighths, .xs-three-twelfths {
     width: 25%;
   }
 
-  /* line 82, ../scss/framework/objects/_grid.scss */
+  /* line 72, ../scss/framework/objects/_grid.scss */
   .xs-three-quarters, .xs-six-eighths, .xs-nine-twelfths {
     width: 75%;
   }
 
-  /**
-  * Fifths
-  */
-  /* line 88, ../scss/framework/objects/_grid.scss */
+  /* line 75, ../scss/framework/objects/_grid.scss */
   .xs-one-fifth, .xs-two-tenths {
     width: 20%;
   }
 
-  /* line 89, ../scss/framework/objects/_grid.scss */
+  /* line 76, ../scss/framework/objects/_grid.scss */
   .xs-two-fifths, .xs-four-tenths {
     width: 40%;
   }
 
-  /* line 90, ../scss/framework/objects/_grid.scss */
+  /* line 77, ../scss/framework/objects/_grid.scss */
   .xs-three-fifths, .xs-six-tenths {
     width: 60%;
   }
 
-  /* line 91, ../scss/framework/objects/_grid.scss */
+  /* line 78, ../scss/framework/objects/_grid.scss */
   .xs-four-fifths, .xs-eight-tenths {
     width: 80%;
   }
 
-  /**
-  * Sixths
-  */
-  /* line 97, ../scss/framework/objects/_grid.scss */
+  /* line 81, ../scss/framework/objects/_grid.scss */
   .xs-one-sixth, .xs-two-twelfths {
     width: 16.666%;
   }
 
-  /* line 101, ../scss/framework/objects/_grid.scss */
+  /* line 85, ../scss/framework/objects/_grid.scss */
   .xs-five-sixths, .xs-ten-twelfths {
     width: 83.333%;
   }
 
-  /**
-  * Eighths
-  */
-  /* line 107, ../scss/framework/objects/_grid.scss */
+  /* line 88, ../scss/framework/objects/_grid.scss */
   .xs-one-eighth {
     width: 12.5%;
   }
 
-  /* line 109, ../scss/framework/objects/_grid.scss */
+  /* line 90, ../scss/framework/objects/_grid.scss */
   .xs-three-eighths {
     width: 37.5%;
   }
 
-  /* line 111, ../scss/framework/objects/_grid.scss */
+  /* line 92, ../scss/framework/objects/_grid.scss */
   .xs-five-eighths {
     width: 62.5%;
   }
 
-  /* line 113, ../scss/framework/objects/_grid.scss */
+  /* line 94, ../scss/framework/objects/_grid.scss */
   .xs-seven-eighths {
     width: 87.5%;
   }
 
-  /**
-  * Tenths
-  */
-  /* line 119, ../scss/framework/objects/_grid.scss */
+  /* line 97, ../scss/framework/objects/_grid.scss */
   .xs-one-tenth {
     width: 10%;
   }
 
-  /* line 121, ../scss/framework/objects/_grid.scss */
+  /* line 99, ../scss/framework/objects/_grid.scss */
   .xs-three-tenths {
     width: 30%;
   }
 
-  /* line 125, ../scss/framework/objects/_grid.scss */
+  /* line 103, ../scss/framework/objects/_grid.scss */
   .xs-seven-tenths {
     width: 70%;
   }
 
-  /* line 127, ../scss/framework/objects/_grid.scss */
+  /* line 105, ../scss/framework/objects/_grid.scss */
   .xs-nine-tenths {
     width: 90%;
   }
 
-  /**
-  * Twelfths
-  */
-  /* line 133, ../scss/framework/objects/_grid.scss */
+  /* line 108, ../scss/framework/objects/_grid.scss */
   .xs-one-twelfth {
     width: 8.333%;
   }
 
-  /* line 137, ../scss/framework/objects/_grid.scss */
+  /* line 112, ../scss/framework/objects/_grid.scss */
   .xs-five-twelfths {
     width: 41.666%;
   }
 
-  /* line 139, ../scss/framework/objects/_grid.scss */
+  /* line 114, ../scss/framework/objects/_grid.scss */
   .xs-seven-twelfths {
     width: 58.333%;
   }
 
-  /* line 143, ../scss/framework/objects/_grid.scss */
+  /* line 118, ../scss/framework/objects/_grid.scss */
   .xs-eleven-twelfths {
     width: 91.666%;
   }
 
-  /* line 146, ../scss/framework/objects/_grid.scss */
+  /* line 121, ../scss/framework/objects/_grid.scss */
   .xs-first {
     clear: left;
   }
 
-  /* line 155, ../scss/framework/objects/_grid.scss */
+  /* line 130, ../scss/framework/objects/_grid.scss */
   .xs-not-first {
     clear: none;
   }
 }
 @media screen and (min-width: 600px) {
-  /**
-  * Whole
-  */
-  /* line 61, ../scss/framework/objects/_grid.scss */
+  /* line 60, ../scss/framework/objects/_grid.scss */
   .s-one-whole {
     width: 100%;
   }
 
-  /**
-  * Halves
-  */
-  /* line 67, ../scss/framework/objects/_grid.scss */
+  /* line 63, ../scss/framework/objects/_grid.scss */
   .s-one-half, .s-two-quarters, .s-three-sixths, .s-four-eighths, .s-five-tenths, .s-six-twelfths {
     width: 50%;
   }
 
-  /**
-  * Thirds
-  */
-  /* line 73, ../scss/framework/objects/_grid.scss */
+  /* line 66, ../scss/framework/objects/_grid.scss */
   .s-one-third, .s-two-sixths, .s-four-twelfths {
     width: 33.333%;
   }
 
-  /* line 74, ../scss/framework/objects/_grid.scss */
+  /* line 67, ../scss/framework/objects/_grid.scss */
   .s-two-thirds, .s-four-sixths, .s-eight-twelfths {
     width: 66.666%;
   }
 
-  /**
-  * Quarters
-  */
-  /* line 80, ../scss/framework/objects/_grid.scss */
+  /* line 70, ../scss/framework/objects/_grid.scss */
   .s-one-quarter, .s-two-eighths, .s-three-twelfths {
     width: 25%;
   }
 
-  /* line 82, ../scss/framework/objects/_grid.scss */
+  /* line 72, ../scss/framework/objects/_grid.scss */
   .s-three-quarters, .s-six-eighths, .s-nine-twelfths {
     width: 75%;
   }
 
-  /**
-  * Fifths
-  */
-  /* line 88, ../scss/framework/objects/_grid.scss */
+  /* line 75, ../scss/framework/objects/_grid.scss */
   .s-one-fifth, .s-two-tenths {
     width: 20%;
   }
 
-  /* line 89, ../scss/framework/objects/_grid.scss */
+  /* line 76, ../scss/framework/objects/_grid.scss */
   .s-two-fifths, .s-four-tenths {
     width: 40%;
   }
 
-  /* line 90, ../scss/framework/objects/_grid.scss */
+  /* line 77, ../scss/framework/objects/_grid.scss */
   .s-three-fifths, .s-six-tenths {
     width: 60%;
   }
 
-  /* line 91, ../scss/framework/objects/_grid.scss */
+  /* line 78, ../scss/framework/objects/_grid.scss */
   .s-four-fifths, .s-eight-tenths {
     width: 80%;
   }
 
-  /**
-  * Sixths
-  */
-  /* line 97, ../scss/framework/objects/_grid.scss */
+  /* line 81, ../scss/framework/objects/_grid.scss */
   .s-one-sixth, .s-two-twelfths {
     width: 16.666%;
   }
 
-  /* line 101, ../scss/framework/objects/_grid.scss */
+  /* line 85, ../scss/framework/objects/_grid.scss */
   .s-five-sixths, .s-ten-twelfths {
     width: 83.333%;
   }
 
-  /**
-  * Eighths
-  */
-  /* line 107, ../scss/framework/objects/_grid.scss */
+  /* line 88, ../scss/framework/objects/_grid.scss */
   .s-one-eighth {
     width: 12.5%;
   }
 
-  /* line 109, ../scss/framework/objects/_grid.scss */
+  /* line 90, ../scss/framework/objects/_grid.scss */
   .s-three-eighths {
     width: 37.5%;
   }
 
-  /* line 111, ../scss/framework/objects/_grid.scss */
+  /* line 92, ../scss/framework/objects/_grid.scss */
   .s-five-eighths {
     width: 62.5%;
   }
 
-  /* line 113, ../scss/framework/objects/_grid.scss */
+  /* line 94, ../scss/framework/objects/_grid.scss */
   .s-seven-eighths {
     width: 87.5%;
   }
 
-  /**
-  * Tenths
-  */
-  /* line 119, ../scss/framework/objects/_grid.scss */
+  /* line 97, ../scss/framework/objects/_grid.scss */
   .s-one-tenth {
     width: 10%;
   }
 
-  /* line 121, ../scss/framework/objects/_grid.scss */
+  /* line 99, ../scss/framework/objects/_grid.scss */
   .s-three-tenths {
     width: 30%;
   }
 
-  /* line 125, ../scss/framework/objects/_grid.scss */
+  /* line 103, ../scss/framework/objects/_grid.scss */
   .s-seven-tenths {
     width: 70%;
   }
 
-  /* line 127, ../scss/framework/objects/_grid.scss */
+  /* line 105, ../scss/framework/objects/_grid.scss */
   .s-nine-tenths {
     width: 90%;
   }
 
-  /**
-  * Twelfths
-  */
-  /* line 133, ../scss/framework/objects/_grid.scss */
+  /* line 108, ../scss/framework/objects/_grid.scss */
   .s-one-twelfth {
     width: 8.333%;
   }
 
-  /* line 137, ../scss/framework/objects/_grid.scss */
+  /* line 112, ../scss/framework/objects/_grid.scss */
   .s-five-twelfths {
     width: 41.666%;
   }
 
-  /* line 139, ../scss/framework/objects/_grid.scss */
+  /* line 114, ../scss/framework/objects/_grid.scss */
   .s-seven-twelfths {
     width: 58.333%;
   }
 
-  /* line 143, ../scss/framework/objects/_grid.scss */
+  /* line 118, ../scss/framework/objects/_grid.scss */
   .s-eleven-twelfths {
     width: 91.666%;
   }
 
-  /* line 146, ../scss/framework/objects/_grid.scss */
+  /* line 121, ../scss/framework/objects/_grid.scss */
   .s-first {
     clear: left;
   }
 
-  /* line 155, ../scss/framework/objects/_grid.scss */
+  /* line 130, ../scss/framework/objects/_grid.scss */
   .s-not-first {
     clear: none;
   }
 }
 @media screen and (min-width: 768px) {
-  /**
-  * Whole
-  */
-  /* line 61, ../scss/framework/objects/_grid.scss */
+  /* line 60, ../scss/framework/objects/_grid.scss */
   .m-one-whole {
     width: 100%;
   }
 
-  /**
-  * Halves
-  */
-  /* line 67, ../scss/framework/objects/_grid.scss */
+  /* line 63, ../scss/framework/objects/_grid.scss */
   .m-one-half, .m-two-quarters, .m-three-sixths, .m-four-eighths, .m-five-tenths, .m-six-twelfths {
     width: 50%;
   }
 
-  /**
-  * Thirds
-  */
-  /* line 73, ../scss/framework/objects/_grid.scss */
+  /* line 66, ../scss/framework/objects/_grid.scss */
   .m-one-third, .m-two-sixths, .m-four-twelfths {
     width: 33.333%;
   }
 
-  /* line 74, ../scss/framework/objects/_grid.scss */
+  /* line 67, ../scss/framework/objects/_grid.scss */
   .m-two-thirds, .m-four-sixths, .m-eight-twelfths {
     width: 66.666%;
   }
 
-  /**
-  * Quarters
-  */
-  /* line 80, ../scss/framework/objects/_grid.scss */
+  /* line 70, ../scss/framework/objects/_grid.scss */
   .m-one-quarter, .m-two-eighths, .m-three-twelfths {
     width: 25%;
   }
 
-  /* line 82, ../scss/framework/objects/_grid.scss */
+  /* line 72, ../scss/framework/objects/_grid.scss */
   .m-three-quarters, .m-six-eighths, .m-nine-twelfths {
     width: 75%;
   }
 
-  /**
-  * Fifths
-  */
-  /* line 88, ../scss/framework/objects/_grid.scss */
+  /* line 75, ../scss/framework/objects/_grid.scss */
   .m-one-fifth, .m-two-tenths {
     width: 20%;
   }
 
-  /* line 89, ../scss/framework/objects/_grid.scss */
+  /* line 76, ../scss/framework/objects/_grid.scss */
   .m-two-fifths, .m-four-tenths {
     width: 40%;
   }
 
-  /* line 90, ../scss/framework/objects/_grid.scss */
+  /* line 77, ../scss/framework/objects/_grid.scss */
   .m-three-fifths, .m-six-tenths {
     width: 60%;
   }
 
-  /* line 91, ../scss/framework/objects/_grid.scss */
+  /* line 78, ../scss/framework/objects/_grid.scss */
   .m-four-fifths, .m-eight-tenths {
     width: 80%;
   }
 
-  /**
-  * Sixths
-  */
-  /* line 97, ../scss/framework/objects/_grid.scss */
+  /* line 81, ../scss/framework/objects/_grid.scss */
   .m-one-sixth, .m-two-twelfths {
     width: 16.666%;
   }
 
-  /* line 101, ../scss/framework/objects/_grid.scss */
+  /* line 85, ../scss/framework/objects/_grid.scss */
   .m-five-sixths, .m-ten-twelfths {
     width: 83.333%;
   }
 
-  /**
-  * Eighths
-  */
-  /* line 107, ../scss/framework/objects/_grid.scss */
+  /* line 88, ../scss/framework/objects/_grid.scss */
   .m-one-eighth {
     width: 12.5%;
   }
 
-  /* line 109, ../scss/framework/objects/_grid.scss */
+  /* line 90, ../scss/framework/objects/_grid.scss */
   .m-three-eighths {
     width: 37.5%;
   }
 
-  /* line 111, ../scss/framework/objects/_grid.scss */
+  /* line 92, ../scss/framework/objects/_grid.scss */
   .m-five-eighths {
     width: 62.5%;
   }
 
-  /* line 113, ../scss/framework/objects/_grid.scss */
+  /* line 94, ../scss/framework/objects/_grid.scss */
   .m-seven-eighths {
     width: 87.5%;
   }
 
-  /**
-  * Tenths
-  */
-  /* line 119, ../scss/framework/objects/_grid.scss */
+  /* line 97, ../scss/framework/objects/_grid.scss */
   .m-one-tenth {
     width: 10%;
   }
 
-  /* line 121, ../scss/framework/objects/_grid.scss */
+  /* line 99, ../scss/framework/objects/_grid.scss */
   .m-three-tenths {
     width: 30%;
   }
 
-  /* line 125, ../scss/framework/objects/_grid.scss */
+  /* line 103, ../scss/framework/objects/_grid.scss */
   .m-seven-tenths {
     width: 70%;
   }
 
-  /* line 127, ../scss/framework/objects/_grid.scss */
+  /* line 105, ../scss/framework/objects/_grid.scss */
   .m-nine-tenths {
     width: 90%;
   }
 
-  /**
-  * Twelfths
-  */
-  /* line 133, ../scss/framework/objects/_grid.scss */
+  /* line 108, ../scss/framework/objects/_grid.scss */
   .m-one-twelfth {
     width: 8.333%;
   }
 
-  /* line 137, ../scss/framework/objects/_grid.scss */
+  /* line 112, ../scss/framework/objects/_grid.scss */
   .m-five-twelfths {
     width: 41.666%;
   }
 
-  /* line 139, ../scss/framework/objects/_grid.scss */
+  /* line 114, ../scss/framework/objects/_grid.scss */
   .m-seven-twelfths {
     width: 58.333%;
   }
 
-  /* line 143, ../scss/framework/objects/_grid.scss */
+  /* line 118, ../scss/framework/objects/_grid.scss */
   .m-eleven-twelfths {
     width: 91.666%;
   }
 
-  /* line 146, ../scss/framework/objects/_grid.scss */
+  /* line 121, ../scss/framework/objects/_grid.scss */
   .m-first {
     clear: left;
   }
 
-  /* line 155, ../scss/framework/objects/_grid.scss */
+  /* line 130, ../scss/framework/objects/_grid.scss */
   .m-not-first {
     clear: none;
   }
 }
 @media screen and (min-width: 940px) {
-  /**
-  * Whole
-  */
-  /* line 61, ../scss/framework/objects/_grid.scss */
+  /* line 60, ../scss/framework/objects/_grid.scss */
   .l-one-whole {
     width: 100%;
   }
 
-  /**
-  * Halves
-  */
-  /* line 67, ../scss/framework/objects/_grid.scss */
+  /* line 63, ../scss/framework/objects/_grid.scss */
   .l-one-half, .l-two-quarters, .l-three-sixths, .l-four-eighths, .l-five-tenths, .l-six-twelfths {
     width: 50%;
   }
 
-  /**
-  * Thirds
-  */
-  /* line 73, ../scss/framework/objects/_grid.scss */
+  /* line 66, ../scss/framework/objects/_grid.scss */
   .l-one-third, .l-two-sixths, .l-four-twelfths {
     width: 33.333%;
   }
 
-  /* line 74, ../scss/framework/objects/_grid.scss */
+  /* line 67, ../scss/framework/objects/_grid.scss */
   .l-two-thirds, .l-four-sixths, .l-eight-twelfths {
     width: 66.666%;
   }
 
-  /**
-  * Quarters
-  */
-  /* line 80, ../scss/framework/objects/_grid.scss */
+  /* line 70, ../scss/framework/objects/_grid.scss */
   .l-one-quarter, .l-two-eighths, .l-three-twelfths {
     width: 25%;
   }
 
-  /* line 82, ../scss/framework/objects/_grid.scss */
+  /* line 72, ../scss/framework/objects/_grid.scss */
   .l-three-quarters, .l-six-eighths, .l-nine-twelfths {
     width: 75%;
   }
 
-  /**
-  * Fifths
-  */
-  /* line 88, ../scss/framework/objects/_grid.scss */
+  /* line 75, ../scss/framework/objects/_grid.scss */
   .l-one-fifth, .l-two-tenths {
     width: 20%;
   }
 
-  /* line 89, ../scss/framework/objects/_grid.scss */
+  /* line 76, ../scss/framework/objects/_grid.scss */
   .l-two-fifths, .l-four-tenths {
     width: 40%;
   }
 
-  /* line 90, ../scss/framework/objects/_grid.scss */
+  /* line 77, ../scss/framework/objects/_grid.scss */
   .l-three-fifths, .l-six-tenths {
     width: 60%;
   }
 
-  /* line 91, ../scss/framework/objects/_grid.scss */
+  /* line 78, ../scss/framework/objects/_grid.scss */
   .l-four-fifths, .l-eight-tenths {
     width: 80%;
   }
 
-  /**
-  * Sixths
-  */
-  /* line 97, ../scss/framework/objects/_grid.scss */
+  /* line 81, ../scss/framework/objects/_grid.scss */
   .l-one-sixth, .l-two-twelfths {
     width: 16.666%;
   }
 
-  /* line 101, ../scss/framework/objects/_grid.scss */
+  /* line 85, ../scss/framework/objects/_grid.scss */
   .l-five-sixths, .l-ten-twelfths {
     width: 83.333%;
   }
 
-  /**
-  * Eighths
-  */
-  /* line 107, ../scss/framework/objects/_grid.scss */
+  /* line 88, ../scss/framework/objects/_grid.scss */
   .l-one-eighth {
     width: 12.5%;
   }
 
-  /* line 109, ../scss/framework/objects/_grid.scss */
+  /* line 90, ../scss/framework/objects/_grid.scss */
   .l-three-eighths {
     width: 37.5%;
   }
 
-  /* line 111, ../scss/framework/objects/_grid.scss */
+  /* line 92, ../scss/framework/objects/_grid.scss */
   .l-five-eighths {
     width: 62.5%;
   }
 
-  /* line 113, ../scss/framework/objects/_grid.scss */
+  /* line 94, ../scss/framework/objects/_grid.scss */
   .l-seven-eighths {
     width: 87.5%;
   }
 
-  /**
-  * Tenths
-  */
-  /* line 119, ../scss/framework/objects/_grid.scss */
+  /* line 97, ../scss/framework/objects/_grid.scss */
   .l-one-tenth {
     width: 10%;
   }
 
-  /* line 121, ../scss/framework/objects/_grid.scss */
+  /* line 99, ../scss/framework/objects/_grid.scss */
   .l-three-tenths {
     width: 30%;
   }
 
-  /* line 125, ../scss/framework/objects/_grid.scss */
+  /* line 103, ../scss/framework/objects/_grid.scss */
   .l-seven-tenths {
     width: 70%;
   }
 
-  /* line 127, ../scss/framework/objects/_grid.scss */
+  /* line 105, ../scss/framework/objects/_grid.scss */
   .l-nine-tenths {
     width: 90%;
   }
 
-  /**
-  * Twelfths
-  */
-  /* line 133, ../scss/framework/objects/_grid.scss */
+  /* line 108, ../scss/framework/objects/_grid.scss */
   .l-one-twelfth {
     width: 8.333%;
   }
 
-  /* line 137, ../scss/framework/objects/_grid.scss */
+  /* line 112, ../scss/framework/objects/_grid.scss */
   .l-five-twelfths {
     width: 41.666%;
   }
 
-  /* line 139, ../scss/framework/objects/_grid.scss */
+  /* line 114, ../scss/framework/objects/_grid.scss */
   .l-seven-twelfths {
     width: 58.333%;
   }
 
-  /* line 143, ../scss/framework/objects/_grid.scss */
+  /* line 118, ../scss/framework/objects/_grid.scss */
   .l-eleven-twelfths {
     width: 91.666%;
   }
 
-  /* line 146, ../scss/framework/objects/_grid.scss */
+  /* line 121, ../scss/framework/objects/_grid.scss */
   .l-first {
     clear: left;
   }
 
-  /* line 155, ../scss/framework/objects/_grid.scss */
+  /* line 130, ../scss/framework/objects/_grid.scss */
   .l-not-first {
     clear: none;
   }
 }
 @media screen and (min-width: 1120px) {
-  /**
-  * Whole
-  */
-  /* line 61, ../scss/framework/objects/_grid.scss */
+  /* line 60, ../scss/framework/objects/_grid.scss */
   .xl-one-whole {
     width: 100%;
   }
 
-  /**
-  * Halves
-  */
-  /* line 67, ../scss/framework/objects/_grid.scss */
+  /* line 63, ../scss/framework/objects/_grid.scss */
   .xl-one-half, .xl-two-quarters, .xl-three-sixths, .xl-four-eighths, .xl-five-tenths, .xl-six-twelfths {
     width: 50%;
   }
 
-  /**
-  * Thirds
-  */
-  /* line 73, ../scss/framework/objects/_grid.scss */
+  /* line 66, ../scss/framework/objects/_grid.scss */
   .xl-one-third, .xl-two-sixths, .xl-four-twelfths {
     width: 33.333%;
   }
 
-  /* line 74, ../scss/framework/objects/_grid.scss */
+  /* line 67, ../scss/framework/objects/_grid.scss */
   .xl-two-thirds, .xl-four-sixths, .xl-eight-twelfths {
     width: 66.666%;
   }
 
-  /**
-  * Quarters
-  */
-  /* line 80, ../scss/framework/objects/_grid.scss */
+  /* line 70, ../scss/framework/objects/_grid.scss */
   .xl-one-quarter, .xl-two-eighths, .xl-three-twelfths {
     width: 25%;
   }
 
-  /* line 82, ../scss/framework/objects/_grid.scss */
+  /* line 72, ../scss/framework/objects/_grid.scss */
   .xl-three-quarters, .xl-six-eighths, .xl-nine-twelfths {
     width: 75%;
   }
 
-  /**
-  * Fifths
-  */
-  /* line 88, ../scss/framework/objects/_grid.scss */
+  /* line 75, ../scss/framework/objects/_grid.scss */
   .xl-one-fifth, .xl-two-tenths {
     width: 20%;
   }
 
-  /* line 89, ../scss/framework/objects/_grid.scss */
+  /* line 76, ../scss/framework/objects/_grid.scss */
   .xl-two-fifths, .xl-four-tenths {
     width: 40%;
   }
 
-  /* line 90, ../scss/framework/objects/_grid.scss */
+  /* line 77, ../scss/framework/objects/_grid.scss */
   .xl-three-fifths, .xl-six-tenths {
     width: 60%;
   }
 
-  /* line 91, ../scss/framework/objects/_grid.scss */
+  /* line 78, ../scss/framework/objects/_grid.scss */
   .xl-four-fifths, .xl-eight-tenths {
     width: 80%;
   }
 
-  /**
-  * Sixths
-  */
-  /* line 97, ../scss/framework/objects/_grid.scss */
+  /* line 81, ../scss/framework/objects/_grid.scss */
   .xl-one-sixth, .xl-two-twelfths {
     width: 16.666%;
   }
 
-  /* line 101, ../scss/framework/objects/_grid.scss */
+  /* line 85, ../scss/framework/objects/_grid.scss */
   .xl-five-sixths, .xl-ten-twelfths {
     width: 83.333%;
   }
 
-  /**
-  * Eighths
-  */
-  /* line 107, ../scss/framework/objects/_grid.scss */
+  /* line 88, ../scss/framework/objects/_grid.scss */
   .xl-one-eighth {
     width: 12.5%;
   }
 
-  /* line 109, ../scss/framework/objects/_grid.scss */
+  /* line 90, ../scss/framework/objects/_grid.scss */
   .xl-three-eighths {
     width: 37.5%;
   }
 
-  /* line 111, ../scss/framework/objects/_grid.scss */
+  /* line 92, ../scss/framework/objects/_grid.scss */
   .xl-five-eighths {
     width: 62.5%;
   }
 
-  /* line 113, ../scss/framework/objects/_grid.scss */
+  /* line 94, ../scss/framework/objects/_grid.scss */
   .xl-seven-eighths {
     width: 87.5%;
   }
 
-  /**
-  * Tenths
-  */
-  /* line 119, ../scss/framework/objects/_grid.scss */
+  /* line 97, ../scss/framework/objects/_grid.scss */
   .xl-one-tenth {
     width: 10%;
   }
 
-  /* line 121, ../scss/framework/objects/_grid.scss */
+  /* line 99, ../scss/framework/objects/_grid.scss */
   .xl-three-tenths {
     width: 30%;
   }
 
-  /* line 125, ../scss/framework/objects/_grid.scss */
+  /* line 103, ../scss/framework/objects/_grid.scss */
   .xl-seven-tenths {
     width: 70%;
   }
 
-  /* line 127, ../scss/framework/objects/_grid.scss */
+  /* line 105, ../scss/framework/objects/_grid.scss */
   .xl-nine-tenths {
     width: 90%;
   }
 
-  /**
-  * Twelfths
-  */
-  /* line 133, ../scss/framework/objects/_grid.scss */
+  /* line 108, ../scss/framework/objects/_grid.scss */
   .xl-one-twelfth {
     width: 8.333%;
   }
 
-  /* line 137, ../scss/framework/objects/_grid.scss */
+  /* line 112, ../scss/framework/objects/_grid.scss */
   .xl-five-twelfths {
     width: 41.666%;
   }
 
-  /* line 139, ../scss/framework/objects/_grid.scss */
+  /* line 114, ../scss/framework/objects/_grid.scss */
   .xl-seven-twelfths {
     width: 58.333%;
   }
 
-  /* line 143, ../scss/framework/objects/_grid.scss */
+  /* line 118, ../scss/framework/objects/_grid.scss */
   .xl-eleven-twelfths {
     width: 91.666%;
   }
 
-  /* line 146, ../scss/framework/objects/_grid.scss */
+  /* line 121, ../scss/framework/objects/_grid.scss */
   .xl-first {
     clear: left;
   }
 
-  /* line 155, ../scss/framework/objects/_grid.scss */
+  /* line 130, ../scss/framework/objects/_grid.scss */
   .xl-not-first {
     clear: none;
   }
 }
 @media screen and (min-width: 1300px) {
-  /**
-  * Whole
-  */
-  /* line 61, ../scss/framework/objects/_grid.scss */
+  /* line 60, ../scss/framework/objects/_grid.scss */
   .xxl-one-whole {
     width: 100%;
   }
 
-  /**
-  * Halves
-  */
-  /* line 67, ../scss/framework/objects/_grid.scss */
+  /* line 63, ../scss/framework/objects/_grid.scss */
   .xxl-one-half, .xxl-two-quarters, .xxl-three-sixths, .xxl-four-eighths, .xxl-five-tenths, .xxl-six-twelfths {
     width: 50%;
   }
 
-  /**
-  * Thirds
-  */
-  /* line 73, ../scss/framework/objects/_grid.scss */
+  /* line 66, ../scss/framework/objects/_grid.scss */
   .xxl-one-third, .xxl-two-sixths, .xxl-four-twelfths {
     width: 33.333%;
   }
 
-  /* line 74, ../scss/framework/objects/_grid.scss */
+  /* line 67, ../scss/framework/objects/_grid.scss */
   .xxl-two-thirds, .xxl-four-sixths, .xxl-eight-twelfths {
     width: 66.666%;
   }
 
-  /**
-  * Quarters
-  */
-  /* line 80, ../scss/framework/objects/_grid.scss */
+  /* line 70, ../scss/framework/objects/_grid.scss */
   .xxl-one-quarter, .xxl-two-eighths, .xxl-three-twelfths {
     width: 25%;
   }
 
-  /* line 82, ../scss/framework/objects/_grid.scss */
+  /* line 72, ../scss/framework/objects/_grid.scss */
   .xxl-three-quarters, .xxl-six-eighths, .xxl-nine-twelfths {
     width: 75%;
   }
 
-  /**
-  * Fifths
-  */
-  /* line 88, ../scss/framework/objects/_grid.scss */
+  /* line 75, ../scss/framework/objects/_grid.scss */
   .xxl-one-fifth, .xxl-two-tenths {
     width: 20%;
   }
 
-  /* line 89, ../scss/framework/objects/_grid.scss */
+  /* line 76, ../scss/framework/objects/_grid.scss */
   .xxl-two-fifths, .xxl-four-tenths {
     width: 40%;
   }
 
-  /* line 90, ../scss/framework/objects/_grid.scss */
+  /* line 77, ../scss/framework/objects/_grid.scss */
   .xxl-three-fifths, .xxl-six-tenths {
     width: 60%;
   }
 
-  /* line 91, ../scss/framework/objects/_grid.scss */
+  /* line 78, ../scss/framework/objects/_grid.scss */
   .xxl-four-fifths, .xxl-eight-tenths {
     width: 80%;
   }
 
-  /**
-  * Sixths
-  */
-  /* line 97, ../scss/framework/objects/_grid.scss */
+  /* line 81, ../scss/framework/objects/_grid.scss */
   .xxl-one-sixth, .xxl-two-twelfths {
     width: 16.666%;
   }
 
-  /* line 101, ../scss/framework/objects/_grid.scss */
+  /* line 85, ../scss/framework/objects/_grid.scss */
   .xxl-five-sixths, .xxl-ten-twelfths {
     width: 83.333%;
   }
 
-  /**
-  * Eighths
-  */
-  /* line 107, ../scss/framework/objects/_grid.scss */
+  /* line 88, ../scss/framework/objects/_grid.scss */
   .xxl-one-eighth {
     width: 12.5%;
   }
 
-  /* line 109, ../scss/framework/objects/_grid.scss */
+  /* line 90, ../scss/framework/objects/_grid.scss */
   .xxl-three-eighths {
     width: 37.5%;
   }
 
-  /* line 111, ../scss/framework/objects/_grid.scss */
+  /* line 92, ../scss/framework/objects/_grid.scss */
   .xxl-five-eighths {
     width: 62.5%;
   }
 
-  /* line 113, ../scss/framework/objects/_grid.scss */
+  /* line 94, ../scss/framework/objects/_grid.scss */
   .xxl-seven-eighths {
     width: 87.5%;
   }
 
-  /**
-  * Tenths
-  */
-  /* line 119, ../scss/framework/objects/_grid.scss */
+  /* line 97, ../scss/framework/objects/_grid.scss */
   .xxl-one-tenth {
     width: 10%;
   }
 
-  /* line 121, ../scss/framework/objects/_grid.scss */
+  /* line 99, ../scss/framework/objects/_grid.scss */
   .xxl-three-tenths {
     width: 30%;
   }
 
-  /* line 125, ../scss/framework/objects/_grid.scss */
+  /* line 103, ../scss/framework/objects/_grid.scss */
   .xxl-seven-tenths {
     width: 70%;
   }
 
-  /* line 127, ../scss/framework/objects/_grid.scss */
+  /* line 105, ../scss/framework/objects/_grid.scss */
   .xxl-nine-tenths {
     width: 90%;
   }
 
-  /**
-  * Twelfths
-  */
-  /* line 133, ../scss/framework/objects/_grid.scss */
+  /* line 108, ../scss/framework/objects/_grid.scss */
   .xxl-one-twelfth {
     width: 8.333%;
   }
 
-  /* line 137, ../scss/framework/objects/_grid.scss */
+  /* line 112, ../scss/framework/objects/_grid.scss */
   .xxl-five-twelfths {
     width: 41.666%;
   }
 
-  /* line 139, ../scss/framework/objects/_grid.scss */
+  /* line 114, ../scss/framework/objects/_grid.scss */
   .xxl-seven-twelfths {
     width: 58.333%;
   }
 
-  /* line 143, ../scss/framework/objects/_grid.scss */
+  /* line 118, ../scss/framework/objects/_grid.scss */
   .xxl-eleven-twelfths {
     width: 91.666%;
   }
 
-  /* line 146, ../scss/framework/objects/_grid.scss */
+  /* line 121, ../scss/framework/objects/_grid.scss */
   .xxl-first {
     clear: left;
   }
 
-  /* line 155, ../scss/framework/objects/_grid.scss */
+  /* line 130, ../scss/framework/objects/_grid.scss */
   .xxl-not-first {
     clear: none;
   }
@@ -4074,7 +3876,7 @@ h1, .h1 {
 }
 
 /* === BLOCKQUOTE === */
-/* line 32, ../scss/skin/_typography.scss */
+/* line 33, ../scss/skin/_typography.scss */
 blockquote {
   margin-left: 1em;
   margin-right: 1em;
@@ -4082,35 +3884,35 @@ blockquote {
 }
 
 /* === LISTS === */
-/* line 40, ../scss/skin/_typography.scss */
+/* line 41, ../scss/skin/_typography.scss */
 ul,
 ol {
   padding-left: 2em;
 }
 
 /* === SIZES === */
-/* line 45, ../scss/skin/_typography.scss */
+/* line 46, ../scss/skin/_typography.scss */
 .tiny {
   font-size: 0.8em;
 }
 
-/* line 48, ../scss/skin/_typography.scss */
+/* line 49, ../scss/skin/_typography.scss */
 .small {
   font-size: 0.9em;
 }
 
-/* line 51, ../scss/skin/_typography.scss */
+/* line 52, ../scss/skin/_typography.scss */
 .large {
   font-size: 1.1em;
 }
 
-/* line 54, ../scss/skin/_typography.scss */
+/* line 55, ../scss/skin/_typography.scss */
 .extra-large {
   font-size: 1.2em;
 }
 
 /* === EMPHASIS === */
-/* line 59, ../scss/skin/_typography.scss */
+/* line 60, ../scss/skin/_typography.scss */
 .zomg {
   font-size: 1.25em;
   font-weight: bold;

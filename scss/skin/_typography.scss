@@ -10,22 +10,23 @@
 	font-family: $alt-font;
 }
 h1, .h1 {
+	@extend %h1-size;
 	color: $brand-colour;
 }
 h2, .h2 {
-	
+	@extend %h2-size;
 }
 h3, .h3 {
-	
+	@extend %h3-size;
 }
 h4, .h4 {
-	
+	@extend %h4-size;
 }
 h5, .h5 {
-	
+	@extend %h5-size;
 }
 h6, .h6 {
-	
+	@extend %h6-size;
 }
 
 /* === BLOCKQUOTE === */

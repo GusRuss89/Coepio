@@ -1,19 +1,19 @@
-// From Inuit.css
-h1,.h1{
+/* Sizes are declared on their own here in extendable classes */
+%h1-size {
     @include font-size($h1-size);
 }
-h2,.h2{
+%h2-size {
     @include font-size($h2-size);
 }
-h3,.h3{
+%h3-size {
     @include font-size($h3-size);
 }
-h4,.h4{
+%h4-size {
     @include font-size($h4-size);
 }
-h5,.h5{
+%h5-size {
     @include font-size($h5-size);
 }
-h6,.h6{
+%h6-size {
     @include font-size($h6-size);
 }
