@@ -2,10 +2,10 @@
 img {
     max-width: 100%;
     height: auto;
-}
-// This fixes IE8 height bug
-.lt-ie9 img {
-	width: auto;
+    // Fix IE8 height bug
+    .lt-ie9 & {
+    	width: auto;
+    }
 }
 
 // Wordpress image classes (change to use variables)
