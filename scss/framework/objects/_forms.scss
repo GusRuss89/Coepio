@@ -1,6 +1,6 @@
 // https://github.com/nathansmith/formalize/blob/master/assets/css/_formalize.scss
 
-// `UI Consistency
+// UI Consistency
 //----------------------------------------------------------------------------------------------------
 
 input[type="search"]::-webkit-search-decoration {
@@ -146,7 +146,7 @@ textarea.placeholder_text {
   select,
   select[size="0"],
   select[size="1"] {
-    // Base64 encoded "../images/select_arrow.gif"
+    // Base64 encoded arrow
     background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
     background-repeat: no-repeat;
     background-position: right center;

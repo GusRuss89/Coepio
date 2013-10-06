@@ -4,16 +4,13 @@
 </ul>
 */
 .nav {
-    list-style:none;
-    margin-left:0;
-    margin-bottom: 0;
-    padding-left: 0;
+    @extend %reset-list;
     @extend .cf;
 
-    > li{
+    > li {
 
         &,
-        > a{
+        > a {
             display:inline-block;
             *display:inline;
             zoom:1;

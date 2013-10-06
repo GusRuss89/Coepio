@@ -8,7 +8,8 @@ img {
     }
 }
 
-// Wordpress image classes (change to use variables)
+// Wordpress image classes
+// TODO: Add caption classes
 img.alignright {
 	float: right;
 	margin: 0 0 $base-line-height + px $base-line-height + px;

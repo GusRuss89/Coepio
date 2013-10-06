@@ -5,12 +5,17 @@
  * the desktop menu.
  *
  * E.g.
- * .menu li {
- *  	display: block;
- *  	@include at-least($bp-m) {
- *  		display: inline;
- *  	}
+ * .menu {
+ * 		li {
+ *  		display: block;
+ *  		@include at-least($bp-m) {
+ *  			display: inline;
+ *  		}
+ * 		}
  * }
+ *
+ * Write your styles to extend the .menu class in framework/objects/_nav.scss
+ *
  */
 
 // Declare a menu breakpoint variable here (or multiple if you like)

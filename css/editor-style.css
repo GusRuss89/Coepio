@@ -2665,26 +2665,26 @@ img {
   width: auto;
 }
 
-/* line 12, ../scss/framework/objects/_elements.scss */
+/* line 13, ../scss/framework/objects/_elements.scss */
 img.alignright {
   float: right;
   margin: 0 0 20.8px 20.8px;
 }
 
-/* line 16, ../scss/framework/objects/_elements.scss */
+/* line 17, ../scss/framework/objects/_elements.scss */
 img.alignleft {
   float: left;
   margin: 0 20.8px 20.8px 0;
 }
 
-/* line 20, ../scss/framework/objects/_elements.scss */
+/* line 21, ../scss/framework/objects/_elements.scss */
 img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 25, ../scss/framework/objects/_elements.scss */
+/* line 26, ../scss/framework/objects/_elements.scss */
 img.alignnone {
   margin: 0 0 20.8px 0;
 }

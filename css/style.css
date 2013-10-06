@@ -2664,26 +2664,26 @@ img {
   width: auto;
 }
 
-/* line 12, ../scss/framework/objects/_elements.scss */
+/* line 13, ../scss/framework/objects/_elements.scss */
 img.alignright {
   float: right;
   margin: 0 0 20.8px 20.8px;
 }
 
-/* line 16, ../scss/framework/objects/_elements.scss */
+/* line 17, ../scss/framework/objects/_elements.scss */
 img.alignleft {
   float: left;
   margin: 0 20.8px 20.8px 0;
 }
 
-/* line 20, ../scss/framework/objects/_elements.scss */
+/* line 21, ../scss/framework/objects/_elements.scss */
 img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 25, ../scss/framework/objects/_elements.scss */
+/* line 26, ../scss/framework/objects/_elements.scss */
 img.alignnone {
   margin: 0 0 20.8px 0;
 }
@@ -2934,14 +2934,7 @@ optgroup::-moz-focus-inner {
     <li><a>Link</a></li>
 </ul>
 */
-/* line 6, ../scss/framework/objects/_nav.scss */
-.nav {
-  list-style: none;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-}
-/* line 16, ../scss/framework/objects/_nav.scss */
+/* line 13, ../scss/framework/objects/_nav.scss */
 .nav > li,
 .nav > li > a {
   display: inline-block;
@@ -4115,18 +4108,15 @@ optgroup::-moz-focus-inner {
 Make the Facebook Like box responsive (fluid width)
 https://developers.facebook.com/docs/reference/plugins/like-box/ 
 */
-/* 
-This element holds injected scripts inside iframes that in 
-some cases may stretch layouts. So, we're just hiding it. 
-*/
-/* line 11, ../scss/framework/objects/_facebook.scss */
+/* line 8, ../scss/framework/objects/_facebook.scss */
 #fb-root {
   display: none;
 }
 
-/* To fill the container and nothing else */
-/* line 17, ../scss/framework/objects/_facebook.scss */
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+/* line 15, ../scss/framework/objects/_facebook.scss */
+.fb_iframe_widget,
+.fb_iframe_widget span,
+.fb_iframe_widget span iframe[style] {
   width: 100% !important;
 }
 
@@ -4154,6 +4144,13 @@ some cases may stretch layouts. So, we're just hiding it.
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+/* line 18, ../scss/framework/_helpers.scss */
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* line 25, ../scss/framework/_helpers.scss */
@@ -5049,12 +5046,17 @@ input[type="submit"].gform_button {
  * the desktop menu.
  *
  * E.g.
- * .menu li {
- *  	display: block;
- *  	@include at-least($bp-m) {
- *  		display: inline;
- *  	}
+ * .menu {
+ * 		li {
+ *  		display: block;
+ *  		@include at-least($bp-m) {
+ *  			display: inline;
+ *  		}
+ * 		}
  * }
+ *
+ * Write your styles to extend the .menu class in framework/objects/_nav.scss
+ *
  */
 /* === PAGE CONTENT === */
 /**
