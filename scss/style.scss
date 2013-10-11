@@ -16,7 +16,8 @@
 
 // === VARIABLES & MIXINS === //
 @import "skin/variables";
-@import "framework/mixins";
+@import "framework/mixins"; // Framework mixins
+@import "skin/mixins"; // Project mixins
 
 // === COEPIO FRAMEWORK === //
 @import "framework/objects/headings";
@@ -26,7 +27,7 @@
 @import "framework/objects/nav";
 @import "framework/objects/grid";
 @import "framework/objects/facebook";
-@import "framework/helpers";
+@import "framework/helpers"; // Clearfix, image replacement etc
 
 /* === SKIN === */
 // Base - basic setup //
