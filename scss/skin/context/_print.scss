@@ -1,0 +1,18 @@
+//
+// Print styles to extend framework/_print.scss
+//
+
+// Don't display these things
+.noprint,
+.sidebar,
+.main-menu {
+	display: none !important;
+	visibility: hidden !important;
+}
+
+// Main content 100% width
+.main-col,
+.page-width {
+	width: 100% !important;
+	max-width: 100% !important;
+}

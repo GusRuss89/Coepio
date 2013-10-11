@@ -8,20 +8,17 @@
 		- Harry Roberts (Inuit.css)
 \****************************************************/
 
-/* === KICK THINGS OFF === */
+// === KICK THINGS OFF === //
 // Normalize
 @import "framework/normalize";
 //Compass
 @import "compass";
 
-/* === VARIABLES & MIXINS === */
+// === VARIABLES & MIXINS === //
 @import "skin/variables";
 @import "framework/mixins";
 
-/* === FONTS AND ICONS === */
-@import "third-party/font-awesome/font-awesome";
-
-/* === COEPIO FRAMEWORK === */
+// === COEPIO FRAMEWORK === //
 @import "framework/objects/headings";
 @import "framework/objects/elements";
 @import "framework/objects/forms";
@@ -32,60 +29,44 @@
 @import "framework/helpers";
 
 /* === SKIN === */
-// Base (html, body)
-@import "skin/base";
-// Vertical rhythm
-@import "skin/vertical-rhythm";
-// Objects (reusable skin classes)
-@import "skin/objects";
-// Typography
-@import "skin/typography";
-// Links
-@import "skin/links";
+// Base - basic setup //
+@import "skin/base/base";
+@import "skin/base/vertical-rhythm";
+@import "skin/base/layout";
 
-// Elements
-@import "skin/elements"; // Extend / add to elements in framework/objects
-@import "skin/buttons";
-@import "skin/tables";
-@import "skin/code";
-// etc...
+// Things - html elements, reusable classes //
+@import "skin/things/typography";
+@import "skin/things/links";
+@import "skin/things/elements"; // <img>, <hr>
+@import "skin/things/buttons";
+@import "skin/things/tables";
+@import "skin/things/code"; // <code>, <pre>
+@import "skin/things/objects"; // Reusable skin classes
+@import "skin/things/forms";
 
-// Forms
-@import "skin/forms";
+// Parts - sections that all/most pages share //
+@import "skin/parts/page"; // Stuff every page has
+@import "skin/parts/header";
+@import "skin/parts/footer";
+@import "skin/parts/sidebar";
+	// Navigation
+	@import "skin/parts/navigation/main-menu";
+	// @import "skin/navigation/top-menu";
+	// @import "skin/navigation/social-media-menu";
+	// @import "skin/navigation/submenu";
+	// @import "skin/navigation/pagination";
 
-// Header
-@import "skin/header";
+// Views - specific styles for different views (home, portfolio, blog etc) //
+@import "skin/views/home";
+@import "skin/views/posts";
 
-// Footer
-@import "skin/footer";
+// Third Party //
+// @import "third-party/font-awesome/font-awesome";
 
-// Navigation
-@import "skin/navigation/main-menu";
-// Other navigation suggestions
-// @import "skin/navigation/top-menu";
-// @import "skin/navigation/social-media-menu";
-// @import "skin/navigation/submenu";
-// @import "skin/navigation/pagination";
-
-/* === PAGE CONTENT === */
-// Layout
-@import "skin/layout";
-
-// Pages
-@import "skin/pages/page";
-
-// Posts
-@import "skin/pages/posts";
-
-// Sidebar
-@import "skin/sidebar";
-
-// Specific Pages
-@import "skin/pages/home";
-// Other examples: portfolio, news etc.
-// Make a new file for each in skin/pages/
-
-// Print styles
+// Context //
+@import "skin/context/ie"; // Here if you need it, but use .lt-ie9 & {} inside a rul for little things
+// Print
 @media print {
 	@import "framework/print";
+	@import "skin/context/print";
 }

@@ -1,10 +1,10 @@
-/**
- * Vertical rhythm. Try to avoid adding vertical
- * margins to individual elements and add them
- * here instead. It helps keep an even flow.
- * Margins are spaced in only one direction (down),
- * read about that here: http://csswizardry.com/2012/06/single-direction-margin-declarations/
- */
+//
+// Vertical rhythm. Try to avoid adding vertical
+// margins to individual elements and add them
+// here instead. It helps keep an even flow.
+// Margins are spaced in only one direction (down),
+// read about that here: http://csswizardry.com/2012/06/single-direction-margin-declarations/
+//
 
 // The main rule.
 // Add theme specific vertical line-height selectors, but avoid changing the rules
@@ -15,10 +15,7 @@ ol,
 hr,
 table,
 pre,
-.col,
-.well,
-.btn, .button,
-.media-img {
+.well {
 	margin-bottom: $base-line-height + px;
 	margin-bottom: $base-line-height / 10 + rem;
 	margin-top: 0;
@@ -32,10 +29,8 @@ pre,
 	margin-top: 0;
 }
 
-// Fixes
-.col > .well {
-	margin-bottom: 0;
-}
+// Fixes (if you need any)
+
 
 // Sidebar items should be spaced according to the grid, not typography
 .widget {

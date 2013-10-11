@@ -1,0 +1,22 @@
+// ===
+// Any IE hacks that would be better off here than
+// in the file that the rest of their styles are in.
+//
+// If the IE hack  overrides a specific style, do this in
+// the original file instead:
+// .thing {
+//  	color: red;
+//  	.lt-ie9 & {
+//  		color: blue;
+//  	}
+// }
+// ===
+
+// IE8 and older
+.lt-ie9 {
+	
+}
+// IE7 and older
+.lt-ie8 {
+	
+}

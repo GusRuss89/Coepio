@@ -53,6 +53,8 @@ textarea {
 	height: 120px;
 }
 
+// === Gravity forms styles, delete if not required === //
+
 // === Checkboxes and radios === //
 .gfield_checkbox,
 .gfield_radio {
@@ -67,7 +69,7 @@ textarea {
 
 // === Complex fields === //
 // Date picker
-@import "../third-party/gforms-datepicker";
+@import "../../third-party/gforms-datepicker";
 .ginput_container {
 	position: relative;
 }
