@@ -3807,7 +3807,12 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 13px;
   line-height: 1.6;
-  color: #797374;
+  color: #797a7c;
+}
+
+/* line 19, ../scss/skin/base/_base.scss */
+.site-wrap {
+  overflow: hidden;
 }
 
 /* line 18, ../scss/skin/base/_vertical-rhythm.scss */
@@ -3846,14 +3851,14 @@ h1, h2, h3, h4, h5, h6,
 /* line 7, ../scss/skin/things/_typography.scss */
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  color: #231f20;
+  color: #222425;
   font-weight: normal;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 /* line 12, ../scss/skin/things/_typography.scss */
 h1, .h1 {
-  color: #ee2e24;
+  color: #33db9a;
 }
 
 /* === BLOCKQUOTE === */
@@ -3898,7 +3903,7 @@ ol {
   font-size: 1.25em;
   font-weight: bold;
   text-transform: uppercase;
-  color: #ee2e24;
+  color: #33db9a;
 }
 
 /**
@@ -3908,7 +3913,7 @@ ol {
 a,
 a:link,
 a:visited {
-  color: #ee2e24;
+  color: #33db9a;
   text-decoration: none;
   -webkit-transition: color, 0.2s;
   -moz-transition: color, 0.2s;
@@ -3919,7 +3924,7 @@ a:visited {
 /* line 14, ../scss/skin/things/_links.scss */
 a:hover,
 a:active {
-  color: #cf1a10;
+  color: #21ba7f;
 }
 
 /* line 20, ../scss/skin/things/_links.scss */
@@ -3939,12 +3944,12 @@ a:active {
   box-sizing: padding-box;
   display: inline-block;
   border: 5px solid transparent;
-  border-left-color: #ee2e24;
+  border-left-color: #33db9a;
   margin-left: 5px;
 }
 /* line 36, ../scss/skin/things/_links.scss */
 .feature-link:hover:after {
-  border-left-color: #cf1a10;
+  border-left-color: #21ba7f;
 }
 
 /* line 44, ../scss/skin/things/_links.scss */
@@ -3959,9 +3964,9 @@ a.img-link:hover {
  */
 /* line 8, ../scss/skin/things/_elements.scss */
 .well, .well-tight {
-  padding: 20.8 20.8 0;
-  background: #f3f1f2;
-  border: 1px solid #e3e1e2;
+  padding: 20.8px 20.8px 0;
+  background: #f1f3f5;
+  border: 1px solid #e3e5e7;
 }
 
 /* line 13, ../scss/skin/things/_elements.scss */
@@ -3998,7 +4003,7 @@ input[type="submit"].gform_button,
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  background: #575253;
+  background: #545658;
   border: none;
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #FFF;
@@ -4032,7 +4037,7 @@ input[type="submit"].gform_button:hover,
 .btn-large:active,
 input[type="submit"].gform_button:active,
 .btn-cta:active {
-  background: #231f20;
+  background: #222425;
   text-decoration: none;
 }
 
@@ -4050,14 +4055,14 @@ input[type="submit"].gform_button:active,
 
 /* line 42, ../scss/skin/things/_buttons.scss */
 .btn-cta, input[type="submit"].gform_button {
-  background: #ee2e24;
+  background: #33db9a;
   position: relative;
   padding-right: 2em;
   color: #FFF;
 }
 /* line 49, ../scss/skin/things/_buttons.scss */
 .btn-cta:hover, input[type="submit"].gform_button:hover, .btn-cta:active, input[type="submit"].gform_button:active {
-  background: #cf1a10;
+  background: #21ba7f;
 }
 /* line 53, ../scss/skin/things/_buttons.scss */
 .btn-cta:before, input[type="submit"].gform_button:before {
@@ -4086,13 +4091,13 @@ table th,
 table td {
   padding: 8px;
   vertical-align: top;
-  border-top: 1px solid #f3f1f2;
+  border-top: 1px solid #f1f3f5;
   text-align: left;
 }
 /* line 19, ../scss/skin/things/_tables.scss */
 table th {
   font-weight: bold;
-  color: #231f20;
+  color: #222425;
 }
 /* line 24, ../scss/skin/things/_tables.scss */
 table thead th {
@@ -4100,7 +4105,7 @@ table thead th {
 }
 /* line 28, ../scss/skin/things/_tables.scss */
 table .row-title {
-  color: #231f20;
+  color: #222425;
   font-weight: bold;
 }
 
@@ -4151,7 +4156,7 @@ code {
 /* line 9, ../scss/skin/things/_objects.scss */
 .entry-item {
   /* Elements inside the item should take care of padding */
-  border-bottom: 1px solid #e3e1e2;
+  border-bottom: 1px solid #e3e5e7;
   margin-bottom: 20.8px;
   margin-bottom: 2.08rem;
   /* Except on media entry-items */
@@ -4176,7 +4181,7 @@ code {
 
 /* line 33, ../scss/skin/things/_objects.scss */
 .byline {
-  color: #ee2e24;
+  color: #33db9a;
   margin-top: -0.5em;
 }
 
@@ -4546,5 +4551,5 @@ body {
 /* line 48, ../scss/editor-style.scss */
 .lede {
   font-size: 1.2;
-  color: #575253;
+  color: #545658;
 }

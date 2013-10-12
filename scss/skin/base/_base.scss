@@ -16,3 +16,6 @@ body {
 	color: $text-colour;
 	// -webkit-font-smoothing: antialiased;
 }
+.site-wrap {
+	overflow: hidden; // Stop horizontal scrolling
+}

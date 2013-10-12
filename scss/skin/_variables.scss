@@ -8,8 +8,8 @@
 // Fonts
 $base-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $alt-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-$base-font-size: 13;
-$relative-line-height: 1.6;
+$base-font-size: 13; // In pixels, but leave the units off
+$relative-line-height: 1.6; // 1.x, no units
 $base-line-height: $base-font-size * $relative-line-height;
 
 // Headings
@@ -22,11 +22,11 @@ $h6-size: $base-font-size;
 
 /* === COLOURS === */
 // Brand - Add the brand colours by name here
-$brand-red: #ee2e24;
-$brand-blue: lightblue;
+$brand-green: #33db9a;
+$brand-blue: #3e8fd8;
 
 // Primary colours
-$brand-colour: $brand-red;
+$brand-colour: $brand-green;
 $alt-colour: $brand-blue;
 
 // Gradients
@@ -35,14 +35,14 @@ $default-gradient-bottom: darken($brand-colour, 5%);
 
 // Greys
 // Tip: add a tinge of the primary colour to each shade of grey for a subtle design touch
-$lightest-grey: #f3f1f2;
-$light-grey: #e3e1e2;
-$grey: #a29e9f;
-$dark-grey: #575253;
-$darkest-grey: #231f20;
+$lightest-grey: #f1f3f5;
+$light-grey: #e3e5e7;
+$grey: #a2a3a5;
+$dark-grey: #545658;
+$darkest-grey: #222425;
 
 // Fonts
-$text-colour: #797374;
+$text-colour: #797a7c;
 $heading-colour: $darkest-grey;
 
 // Links

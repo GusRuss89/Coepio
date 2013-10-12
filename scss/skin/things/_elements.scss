@@ -6,7 +6,7 @@
 
 // Wells (you'll probably want to change these up a bit)
 .well {
-	padding: $base-line-height $base-line-height 0;
+	padding: $base-line-height + px $base-line-height + px 0;
 	background: $lightest-grey;
 	border: 1px solid $light-grey;
 }

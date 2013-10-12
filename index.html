@@ -15,20 +15,14 @@
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 </head>
 <body>
+<div class="site-wrap">
 <!--[if lt IE 8]>
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
     <div class="header-container">
         <header class="page-width cf">
-            <h1 class="title">h1.title</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">nav ul li a</a></li>
-                    <li><a href="#">nav ul li a</a></li>
-                    <li><a href="#">nav ul li a</a></li>
-                </ul>
-            </nav>
+            <h1 class="title">Coepio (S)CSS Framework</h1>
         </header>
     </div>
 
@@ -38,49 +32,127 @@
                 <div class="main-col">
                     <article>
                         <header>
-                            <h1>article header h1</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec.</p>
+                            <p>Coepio is a responsive CSS framework based on the principles of OOCSS (Object Oriented CSS), and the work of many others, most notably Harry Roberts’ <a href="http://csswizardry.com/2012/09/inuit-css-v4-oocss-sass-and-more/" target="_blank">Inuit.css</a>&nbsp;and Andy Clarke’s <a href="http://stuffandnonsense.co.uk/projects/320andup/" target="_blank">320 and up</a>.</p>
                         </header>
                         <section>
-                            <h2>article section h2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            <h2>Heading 2</h2>
+                            <p>Here's some stuff to test your styles out.</p>
+                            <p>Buttons</p>
+                            <p>
+                                <a href="#" class="btn-small">A Small Button</a>
+                                <a href="#" class="btn">A Normal Button</a>
+                                <a href="#" class="btn-large">A Large Button</a>
+                                <a href="#" class="btn-cta">A Call To Action Button</a>
+                            </p>
+                            <h3>Heading 3</h3>
+                            <p>A paragraph lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            <blockquote>
+                                <p>A blockquote lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor.</p>
+                            </blockquote>
+                            <p>Some <code>inline code</code>.</p>
+<pre><code>// Some preformatted code
+.ugly-thing {
+    color: red;
+    background: blue;
+    border: 1px solid yellow;
+}</code></pre>
+                            <h4>Heading 4</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Table</th>
+                                        <th>Styles</th>
+                                        <th>Test</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Some data</td>
+                                        <td>Some more data</td>
+                                        <td>789</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yesterday</td>
+                                        <td>Today</td>
+                                        <td>123</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Red</td>
+                                        <td>Blue</td>
+                                        <td>456</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Corolla</td>
+                                        <td>Camry</td>
+                                        <td>2000</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h5>Heading 5</h5>
+                            <form action="#">
+                                <label for="name">Name</label>
+                                <input type="text" name="name">
+                                <label for="email">Email</label>
+                                <input type="email" name="email">
+                                <label for="phone">Phone</label>
+                                <input type="tel" name="phone">
+                                <label for="postcode">Postcode</label>
+                                <input type="number" name="postcode">
+                                <label for="gender">Gender</label>
+                                <select name="gender">
+                                    <option value="">Please Choose...</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <label for="comments">Comments</label>
+                                <textarea name="comments"></textarea>
+                                <input type="checkbox" name="terms" id="terms">
+                                <label for="terms">I accept the terms and conditions</label>
+                                <p><input type="submit" class="btn" value="Submit"></p>
+                            </form>
                         </section>
                         <section>
-                            <h2>article section h2</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices. Proin in est sed erat facilisis pharetra.</p>
+                            <h2>The Grid</h2>
+                            <p>Get your gutter width right.</p>
+                            <div class="grid">
+                                <div class="grid-item one-half m-one-third l-one-quarter">
+                                    <div class="well"><p>One half. Medium one third. Large one quarter.</p></div>
+                          </div><div class="grid-item one-half m-one-third l-one-quarter">
+                                    <div class="well"><p>One half. Medium one third. Large one quarter.</p></div>
+                          </div><div class="grid-item m-one-third l-one-half">
+                                    <div class="well"><p>One whole. Medium one third. Large one half.</p></div>
+                                </div>
+                            </div>
                         </section>
-                        <footer>
-                            <h3>article footer h3</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor.</p>
-                        </footer>
                     </article>
                 </div><!-- .main-col -->
                 <div class="sidebar">
                     <aside class="well">
-                        <h3>aside</h3>
+                        <h3>Sidebar in a well</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales urna non odio egestas tempor. Nunc vel vehicula ante. Etiam bibendum iaculis libero, eget molestie nisl pharetra in. In semper consequat est, eu porta velit mollis nec. Curabitur posuere enim eget turpis feugiat tempor. Etiam ullamcorper lorem dapibus velit suscipit ultrices.</p>
                     </aside>
                 </div><!-- .sidebar -->
             </div><!-- .grid -->
-        </div> <!-- #main -->
-    </div> <!-- #main-container -->
+        </div> <!-- .main -->
+    </div> <!-- .main-container -->
 
     <div class="footer-container">
         <footer class="page-width">
-            <h3>footer</h3>
+            <h3>Footer</h3>
+            <p>Copyright perhaps?</p>
         </footer>
     </div>
+</div><!-- .site-wrap -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+<script src="js/main.js"></script>
 
-    <script src="js/main.js"></script>
-
-    <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src='//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+<script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src='//www.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
 </body>
 </html>
