@@ -38,12 +38,12 @@
 // Things - html elements, reusable classes //
 @import "skin/things/typography";
 @import "skin/things/links";
-@import "skin/things/elements"; // <img>, <hr>, etc
-@import "skin/things/buttons";
+@import "skin/things/forms";
 @import "skin/things/tables";
 @import "skin/things/code"; // <code>, <pre>
+@import "skin/things/buttons";
+@import "skin/things/elements"; // <img>, <hr>, etc
 @import "skin/things/objects"; // Reusable skin classes
-@import "skin/things/forms";
 
 // Parts - sections that all/most pages share //
 @import "skin/parts/page"; // Stuff every page has

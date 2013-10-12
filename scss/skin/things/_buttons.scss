@@ -6,7 +6,9 @@
 
 // To preserve vertical rhythm, buttons should be placed in a <p> tag, or in a <div class="flow">
 .button,
-.btn {
+.btn,
+input.button,
+input.btn {
 	display: inline-block;
 	vertical-align: middle;
 	padding: 0.25em 1em;
@@ -29,17 +31,22 @@
 	}
 }
 // Button sizes
-.btn-small {
+.btn-small,
+.button-small {
 	@extend .btn;
 	@include font-size($base-font-size - 2);
 }
-.btn-large {
+.btn-large,
+.button-large {
 	@extend .btn;
 	@include font-size($base-font-size + 4);
 }
 
 // Call-to-action buttons (you can combine this with a size if you want a large or small call to action)
-.btn-cta {
+.btn-cta,
+.cta-btn,
+.button-cta,
+.cta-button {
 	@extend .btn;
 	background: $brand-colour;
 	position: relative;

@@ -9,7 +9,7 @@ pre {
 	padding: 0 2em;
 	line-height: 2em;
 	font-size: 12px;
-	@include background-image(linear-gradient(rgba(0, 0, 0, .05) 50%, transparent 50%, transparent));
+	@include background-image(linear-gradient($lightest-grey 50%, transparent 50%, transparent));
 	@include background-size(100% 4em);
 	font-family: Monaco, "Andale Mono", "Courier New", Courier, monospace;
 	position: relative;
