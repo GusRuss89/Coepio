@@ -10,9 +10,7 @@
 \****************************************************/
 
 /* === KICK THINGS OFF === */
-// Normalize
 @import "framework/normalize";
-//Compass
 @import "compass";
 
 /* === VARIABLES & MIXINS === */
@@ -29,20 +27,19 @@
 @import "framework/helpers";
 
 /* === SKIN === */
-// Base (html, body)
-@import "skin/base";
-// Vertical rhythm
-@import "skin/vertical-rhythm";
-// Typography
-@import "skin/typography";
-// Links
-@import "skin/links";
+// Base - basic setup //
+@import "skin/base/base";
+@import "skin/base/vertical-rhythm";
 
-// Elements
-@import "skin/elements"; // Extend / add to elements in framework/objects
-@import "skin/buttons";
-@import "skin/tables";
-@import "skin/code";
+// Things - html elements, reusable classes //
+@import "skin/things/typography";
+@import "skin/things/links";
+@import "skin/things/elements"; // <img>, <hr>, etc
+@import "skin/things/buttons";
+@import "skin/things/tables";
+@import "skin/things/code"; // <code>, <pre>
+@import "skin/things/objects"; // Reusable skin classes
+@import "skin/things/forms";
 
 /* === CUSTOM - TINYMCE ONLY === */
 body {
