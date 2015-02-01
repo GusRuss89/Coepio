@@ -1,0 +1,34 @@
+// Search form
+.search-form {
+	background: #FFF;
+	border: 1px solid $grey;
+	position: relative;
+	.s {
+		background: transparent;
+		border: none;
+		padding-right: 35px;
+		max-width: 100%;
+	}
+	.search-submit {
+		position: absolute;
+		width: 30px;
+		right: -1px;
+		top: -1px;
+		bottom: -1px;
+		background: $brand-colour;
+		border: none;
+		text-align: center;
+		color: #FFF;
+		@include font-size(19);
+		vertical-align: middle;
+		transition: .2s;
+		padding: 0;
+		i {
+			position: relative;
+			top: -1px;
+		}
+		&:hover {
+			background: $dark-grey;
+		}
+	}
+}

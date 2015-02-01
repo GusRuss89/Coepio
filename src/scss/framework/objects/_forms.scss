@@ -1,0 +1,202 @@
+// https://github.com/nathansmith/formalize/blob/master/assets/css/_formalize.scss
+
+// UI Consistency
+//----------------------------------------------------------------------------------------------------
+
+input[type="search"]::-webkit-search-decoration {
+  display: none;
+}
+
+input,
+button,
+a.button,
+select,
+textarea {
+  // Suppress red glow that Firefox
+  // adds to form fields by default.
+  &:invalid {
+    box-shadow: none;
+  }
+  // Add blue glow.
+  &:focus {
+    box-shadow: #0066ff 0 0 5px 0;
+    // for Opera
+    z-index: 1;
+  }
+}
+
+input[type="file"],
+input[type="radio"],
+input[type="checkbox"] {
+  &:focus,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  border: 1px solid $border-colour;
+  background: $lightest-grey;
+  cursor: pointer;
+  color: $text-colour;
+  display: inline-block;
+  // Helvetica Neue present, because it works better
+  // for line-height on buttons than Arial, on OS X.
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  padding: 0.2em 1em;
+  text-decoration: none;
+  vertical-align: middle;
+  width: auto;
+  &:hover,
+  &:active {
+    background: darken($lightest-grey, 5%);
+    border-color: darken($border-colour, 5%);
+    text-decoration: none;
+  }
+  // Kill phantom spacing and dotted
+  // border that appears in Firefox.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="file"] {
+  width: 100%;
+  display: block;
+  background-clip: padding-box;
+  border-radius: $border-radius;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid $border-colour;
+  color: $text-colour;
+  outline: 0;
+  margin: 0;
+  padding: 0.1em 0.5em;
+  text-align: left;
+  // Font size - make sure it's at least 16px to stop zooming on mobiles
+  @include font-size($base-font-size);
+  @if $base-font-size < 16 {
+    @include less-than(650px) {
+      @include font-size(16);
+    }
+  }
+  line-height: $base-line-height + px;
+  font-family: $base-font;
+  vertical-align: middle;
+}
+
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  box-shadow: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  color: #AAA;
+  cursor: default;
+}
+
+// Separate rule for Firefox.
+// Separate rule for IE, too.
+// Cannot stack with WebKit's.
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #AAA;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #AAA;
+}
+
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #AAA;
+}
+
+// Tweaks for Safari + Chrome.
+@media (-webkit-min-device-pixel-ratio: 0) {
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px;
+  }
+  select,
+  select[size="0"],
+  select[size="1"] {
+    // Base64 encoded arrow
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px;
+  }
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 13px / 17px $base-font;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    min-height: 16px;
+  }
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border-color: #666666;
+  }
+}
+
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  max-width: 100%;
+}
+
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  // Font family repeated, for Firefox.
+  font-family: $base-font;
+  // Kill phantom spacing and dotted
+  // border that appears in Firefox.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}

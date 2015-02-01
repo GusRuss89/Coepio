@@ -1,0 +1,73 @@
+/**
+ * This is the most useful file in the framework.
+ * Set up the variables for this skin here.
+ * Feel free to add your own for use throughout.
+ */
+
+/* === TYPOGRAPHY === */
+// Fonts
+$base-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$alt-font: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$base-font-size: 13; // In pixels, but leave the units off
+$relative-line-height: 1.6; // 1.x, no units
+$base-line-height: $base-font-size * $relative-line-height;
+
+// Headings
+$h1-size: 32;
+$h2-size: 26;
+$h3-size: 22;
+$h4-size: 17;
+$h5-size: 16;
+$h6-size: $base-font-size;
+
+/* === COLOURS === */
+// Brand - Add the brand colours by name here
+$brand-green: #33db9a;
+$brand-blue: #3e8fd8;
+
+// Primary colours
+$brand-colour: $brand-green;
+$alt-colour: $brand-blue;
+
+// Gradients
+$default-gradient-top: $brand-colour;
+$default-gradient-bottom: darken($brand-colour, 5%);
+
+// Greys
+// Tip: add a tinge of the primary colour to each shade of grey for a subtle design touch
+$lightest-grey: #f1f2f3;
+$light-grey: #e3e4e5;
+$grey: #a2a3a5;
+$dark-grey: #545658;
+$darkest-grey: #222425;
+
+// Fonts
+$text-colour: #797a7c;
+$heading-colour: $darkest-grey;
+
+// Links
+$link-colour: $brand-colour;
+$link-hover-colour: darken($brand-colour, 10%);
+
+/* === BREAKPOINTS === */
+$bp-xs: 480px;
+$bp-s: 600px;
+$bp-m: 768px;
+$bp-l: 940px;
+$bp-xl: 1120px;
+$bp-xxl: 1300px;
+
+// Which breakpoint affects the sidebar
+$sidebar-bp: $bp-l;
+
+/* === GRID === */
+$page-width: 1170px;
+$gutter-width: 44px;
+$m-gutter-width: 36px;
+$s-gutter-width: 30px;
+$tight-gutter-width: 4px;
+
+/* === ELEMENTS === */
+// Borders
+$border-colour: #c3c7ca;
+$border-radius: 0;

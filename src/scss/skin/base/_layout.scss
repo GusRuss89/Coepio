@@ -1,0 +1,76 @@
+/**
+ * Layout of major components.
+ * Define the layout(s) for your site here,
+ * E.g. full-width page, right sidebar, left sidebar,
+ * two sidebars etc.
+ */
+
+/* === PAGE WIDTH === */
+.page-width {
+	width: 90%;
+	max-width: $page-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* 
+ * Rather than changing the classes in the html,
+ * you can do it here by extending the semantic classes
+ * with grid classes. Unfortunately you can't extend 
+ * within the media query, no biggie, all those 
+ * classes have is an easily calculable width.
+ *
+ * I usually output a layout name class on an outer 
+ * wrapper and then adjust the inner panels (main col,
+ * sidebar etc) according to that outer class.
+ */
+
+/* === PAGE WIDTH === */
+.page-width {
+	width: 90%;
+	max-width: $page-width;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* === CONTENT LAYOUTS === */
+// Default (no layout class) - Right Sidebar
+.main-col {
+	@extend .col;
+	@include at-least($sidebar-bp) {
+		width: 66.66%; // Three Quarters
+		float: left;
+	}
+}
+.sidebar {
+	@extend .col;
+	@include at-least($sidebar-bp) {
+		width: 33.33%; // One Quarter
+		float: right;
+		clear: right;
+	}
+}
+#submenu {
+	@include at-least($sidebar-bp) {
+		margin-bottom: 0;
+	}
+}
+
+// Left Sidebar
+.left-sidebar {
+	@include at-least($sidebar-bp) {
+		.main-col {
+			float: right;
+		}
+		.sidebar {
+			float: left;
+			clear: left;
+		}
+	}
+}
+
+// No Sidebar
+.full-width .main-col {
+	width: 100%;
+	float: none;
+}

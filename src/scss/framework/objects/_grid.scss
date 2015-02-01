@@ -1,0 +1,183 @@
+/**
+ * Grids are based on CSS Wizardry Grids, but have the option of using floated columns in
+ * situations where you don't want to comment out whitespace (most of the time).
+ 
+<div class="grid">
+    <div class="col xs-one-half m-one-quarter">
+        <div class="well">Well must be separate because .col has left padding</div>
+    </div>
+    <div class="col xs-one-half m-one-quarter">
+        <p></p>
+    </div>
+    <div class="col xs-one-half m-one-quarter xs-first m-not-first">
+        <div class="well">Well must be separate because .col has left padding</div>
+    </div>
+    <div class="col xs-one-half m-one-quarter">
+        <p></p>
+    </div>
+</div>
+
+ */
+.grid {
+    @extend .cf;
+    margin-left: -$gutter-width;
+    list-style: none;
+    margin-bottom: 0;
+    vertical-align: top;
+    &.tight {
+        margin-left: -$tight-gutter-width;
+        .col, .grid-item {
+            padding-left: $tight-gutter-width;
+            margin-bottom: $tight-gutter-width;
+        }
+    }
+}
+.grid > .grid {
+    margin-left:0;
+}
+// .col uses floats. Use for general layout elements but not when there will be more than one line of grid items
+.col {
+    display: block;
+    float: left;
+    width: 100%;
+    padding-left: $gutter-width;
+}
+// .grid-item uses display: inline-block. Use when elements will wrap (E.g. an image gallery, portfolio etc).
+// The catch on this one is that it requires commenting out the spaces between items.
+.grid-item {
+    @extend .col;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+}
+
+// Adjust gutter widths if necessary
+@if $m-gutter-width != 0 {
+    @include less-than($bp-l) {
+        .grid {
+            margin-left: -$m-gutter-width;
+        }
+        .col, .grid-item {
+            padding-left: $m-gutter-width;
+        }
+    }
+}
+@if $s-gutter-width != 0 {
+    @include less-than($bp-s) {
+        .grid {
+            margin-left: -$s-gutter-width;
+        }
+        .col, .grid-item {
+            padding-left: $s-gutter-width;
+        }
+    }
+}
+
+// Mixin to setup grid widths
+// Allows a single mixin for each media query rather than a whole set of rules
+// Props to Harry Roberts
+@mixin grid-setup($namespace: "") {
+
+    // Whole
+    .#{$namespace}one-whole         { width:100%; }
+
+    // Halves
+    .#{$namespace}one-half          { width:50%; }
+
+    // Thirds
+    .#{$namespace}one-third         { width:33.333%; }
+    .#{$namespace}two-thirds        { width:66.666%; }
+
+    // Quarters
+    .#{$namespace}one-quarter       { width:25%; }
+    .#{$namespace}two-quarters      { @extend .#{$namespace}one-half; }
+    .#{$namespace}three-quarters    { width:75%; }
+
+    // Fifths
+    .#{$namespace}one-fifth         { width:20%; }
+    .#{$namespace}two-fifths        { width:40%; }
+    .#{$namespace}three-fifths      { width:60%; }
+    .#{$namespace}four-fifths       { width:80%; }
+
+    // Sixths
+    .#{$namespace}one-sixth         { width:16.666%; }
+    .#{$namespace}two-sixths        { @extend .#{$namespace}one-third; }
+    .#{$namespace}three-sixths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}four-sixths       { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}five-sixths       { width:83.333%; }
+
+    // Eighths
+    .#{$namespace}one-eighth        { width:12.5%; }
+    .#{$namespace}two-eighths       { @extend .#{$namespace}one-quarter; }
+    .#{$namespace}three-eighths     { width:37.5%; }
+    .#{$namespace}four-eighths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}five-eighths      { width:62.5%; }
+    .#{$namespace}six-eighths       { @extend .#{$namespace}three-quarters; }
+    .#{$namespace}seven-eighths     { width:87.5%; }
+
+    // Tenths
+    .#{$namespace}one-tenth         { width:10%; }
+    .#{$namespace}two-tenths        { @extend .#{$namespace}one-fifth; }
+    .#{$namespace}three-tenths      { width:30%; }
+    .#{$namespace}four-tenths       { @extend .#{$namespace}two-fifths; }
+    .#{$namespace}five-tenths       { @extend .#{$namespace}one-half; }
+    .#{$namespace}six-tenths        { @extend .#{$namespace}three-fifths; }
+    .#{$namespace}seven-tenths      { width:70%; }
+    .#{$namespace}eight-tenths      { @extend .#{$namespace}four-fifths; }
+    .#{$namespace}nine-tenths       { width:90%; }
+
+    // Twelfths
+    .#{$namespace}one-twelfth       { width:8.333%; }
+    .#{$namespace}two-twelfths      { @extend .#{$namespace}one-sixth; }
+    .#{$namespace}three-twelfths    { @extend .#{$namespace}one-quarter; }
+    .#{$namespace}four-twelfths     { @extend .#{$namespace}one-third; }
+    .#{$namespace}five-twelfths     { width:41.666% }
+    .#{$namespace}six-twelfths      { @extend .#{$namespace}one-half; }
+    .#{$namespace}seven-twelfths    { width:58.333%; }
+    .#{$namespace}eight-twelfths    { @extend .#{$namespace}two-thirds; }
+    .#{$namespace}nine-twelfths     { @extend .#{$namespace}three-quarters; }
+    .#{$namespace}ten-twelfths      { @extend .#{$namespace}five-sixths; }
+    .#{$namespace}eleven-twelfths   { width:91.666%; }
+
+    // Clear floats - prefixed by the screen width at which it is first
+    .#{$namespace}first {
+        clear: left;
+    }
+
+    // Stop clearing floats - if switching from one layout to another
+    // (E.g. xs-one-half to m-one-third) the .xs-first class styles will still
+    // be applied. Add m-not-first to these items.
+    // Put simply, if you add a 'first' class, you should also add the 'not-first' class
+    // prefixed by the breakpoint at which the item will no-longer be first.
+    .#{$namespace}not-first {
+        clear: none;
+    }
+
+}
+
+// Setup the grid for base styles (no media queries)
+@include grid-setup();
+
+// Include the grid widths for the various media queries
+@include at-least($bp-xs) {
+    @include grid-setup("xs-");
+}
+
+@include at-least($bp-s) {
+    @include grid-setup("s-");
+}
+
+@include at-least($bp-m) {
+    @include grid-setup("m-");
+}
+
+@include at-least($bp-l) {
+    @include grid-setup("l-");
+}
+
+@include at-least($bp-xl) {
+    @include grid-setup("xl-");
+}
+@include at-least($bp-xxl) {
+    @include grid-setup("xxl-");
+}

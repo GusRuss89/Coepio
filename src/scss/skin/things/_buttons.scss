@@ -1,0 +1,60 @@
+/**
+ * This should be a good starting point
+ * for however you want your buttons to look.
+ * Feel free to change what you like.
+ */
+
+// To preserve vertical rhythm, buttons should be placed in a <p> tag, or in a <div class="flow">
+.btn,
+input.btn {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0.25em 1em;
+	border-radius: $border-radius;
+	background: $dark-grey;
+	border: none;
+	font-family: $alt-font;
+	color: #FFF; // For inputs
+	cursor: pointer; // Also for inputs
+	line-height: $relative-line-height; // Inputs again
+	-webkit-font-smoothing: antialiased; // Again, inputs
+	&:link,
+	&:visited {
+		color: #FFF; // Repeated here to override body link colours
+	}
+	&:hover,
+	&:active {
+		background: $darkest-grey;
+		text-decoration: none;
+	}
+}
+// Button sizes
+.btn-small {
+	@include font-size($base-font-size - 2);
+}
+.btn-large {
+	@include font-size($base-font-size + 4);
+}
+
+// Call-to-action buttons (you can combine this with a size if you want a large or small call to action)
+.btn-cta {
+	background: $brand-colour;
+	position: relative;
+	padding-right: 2em;
+	color: #FFF;
+	&:hover,
+	&:active {
+		background: darken($brand-colour, 10%);
+	}
+	// Right arrow, delete if unwanted :)
+	&:before {
+		position: absolute;
+		content: "";
+		display: block;
+		right: .5em;
+		top: 50%;
+		margin-top: -5px;
+		border: 5px solid transparent;
+		border-left-color: #FFF;
+	}
+}

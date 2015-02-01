@@ -1,0 +1,34 @@
+/**
+ * A blank slate for your footer styles.
+ */
+
+footer {
+	color: $light-grey;
+	background: $darkest-grey;
+	position: relative;
+	@include font-size(13);
+}
+.copyright {
+	margin-bottom: 0;
+}
+.footer-nav {
+	margin: 0;
+	li {
+		padding-right: 8px;
+		border-right: 1px solid $dark-grey;
+		margin-right: 6px;
+		line-height: 1.1;
+		&:last-child {
+			border-right: none;
+		}
+	}
+	a {
+		color: $grey;
+		&:hover {
+			color: darken($light-grey, 15%);
+			&:after {
+				border-top-color: darken($dark-grey, 15%);
+			}
+		}
+	}
+}

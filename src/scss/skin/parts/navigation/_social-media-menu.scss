@@ -1,0 +1,41 @@
+// Social media menu
+
+.social-media-links {
+	@extend .cf;
+	width: auto;
+	float: right;
+	text-align: right;
+	overflow: hidden;
+	ul {
+		vertical-align: top;
+		line-height: 1;
+	}
+	li {
+		float: left;
+		padding-top: 3px;
+	}
+	a {
+		text-indent: -4999px;
+		text-align: left;
+		display: inline-block;
+		position: relative;
+		height: 28px;
+		width:28px;
+		//color: $fsg-dark-yellow;
+		&:before {
+			display: block;
+			text-indent: 0;
+			position: absolute;
+			top: 0;
+			@include font-size(26);
+			@extend .icon;
+			border: none !important;
+		}
+	}
+	.facebook a {	@extend .icon-facebook-square; }
+	.twitter a {	@extend .icon-twitter-square;	}
+	.feed a {		@extend .icon-rss-square;	}
+	.instagram a {	@extend .icon-instagram; }
+	.linkedin a {	@extend .icon-linkedin-square; }
+	.youtube a {	@extend .icon-youtube-square;	}
+}

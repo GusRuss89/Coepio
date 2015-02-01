@@ -1,0 +1,51 @@
+// === Media object === //
+// Media mixin
+@mixin media( $namespace: "" ) {
+    .#{$namespace}media {
+		> .media-img {
+		    float: left;
+		    margin-right: $base-line-height + px;
+		    max-width: 25%;
+		}
+	}
+}
+// Common media rules
+.media-img {
+	margin-bottom: $base-line-height * 0.66 + px;
+}
+.media-body {
+    overflow: hidden;
+    @include no-padding-on-last-child();
+}
+// Base media rule (all breakpoints)
+.media,
+.xs-media,
+.s-media,
+.m-media,
+.l-media,
+.xl-media,
+.xxl-media {
+	@extend .cf;
+	display: block;
+}
+// No breakpoint
+@include media();
+// Responsive media rules
+@include at-least($bp-xs) {
+	@include media("xs-");
+}
+@include at-least($bp-s) {
+	@include media("s-");
+}
+@include at-least($bp-m) {
+	@include media("m-");
+}
+@include at-least($bp-l) {
+	@include media("l-");
+}
+@include at-least($bp-xl) {
+	@include media("xl-");
+}
+@include at-least($bp-xxl) {
+	@include media("xxl-");
+}

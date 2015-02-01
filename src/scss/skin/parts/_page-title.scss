@@ -1,0 +1,29 @@
+.page-title-layer {
+	background: $light-grey;
+	border-bottom: 1px solid darken($light-grey, 8%);
+	.page-width {
+		padding: $base-line-height + px 0;
+	}
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+.page-title,
+.post-title {
+	margin-bottom: 0;
+}
+.sub-title {
+	margin-bottom: 0;
+	color: $dark-grey;
+	font-family: $alt-font;
+	@include font-size(18);
+}
+#breadcrumbs {
+	display: none;
+	@include font-size(13);
+	margin: 8px 0 0;
+	
+	@include at-least($bp-m) {
+		display: block;
+	}
+}

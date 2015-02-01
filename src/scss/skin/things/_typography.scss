@@ -1,0 +1,73 @@
+/**
+ * Typography. Edit as desired.
+ */
+
+/* === HEADINGS === */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	color: $heading-colour;
+	font-weight: normal;
+	font-family: $alt-font;
+}
+h1, .h1 {
+	@extend %h1-size;
+	color: $brand-colour;
+}
+h2, .h2 {
+	@extend %h2-size;
+}
+h3, .h3 {
+	@extend %h3-size;
+}
+h4, .h4 {
+	@extend %h4-size;
+}
+h5, .h5 {
+	@extend %h5-size;
+}
+h6, .h6 {
+	@extend %h6-size;
+}
+
+/* === BLOCKQUOTE === */
+blockquote {
+	margin-left: 1em;
+	margin-right: 1em;
+	font-family: $alt-font;
+}
+
+/* === LISTS === */
+ul,
+ol {
+	padding-left: 2em;
+}
+
+/* === SIZES === */
+.tiny {
+	font-size: 0.8em;
+}
+.small {
+	font-size: 0.9em;
+}
+.large {
+	font-size: 1.1em;
+}
+.extra-large {
+	font-size: 1.2em;
+}
+
+/* === EMPHASIS === */
+.zomg {
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: $brand-colour;
+}
+
+/* === LEADING PARAGRAPH === */
+.lede,
+.lead {
+	font-size: 1.3em;
+	color: $darkest-grey;
+	font-family: $alt-font;
+}

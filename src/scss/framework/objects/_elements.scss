@@ -1,0 +1,46 @@
+// Responsive images
+img {
+    max-width: 100%;
+    height: auto;
+    // Fix IE8 height bug
+    .lt-ie9 & {
+    	width: auto;
+    }
+}
+
+// Wordpress image classes
+.aligncenter,
+.alignright,
+.alignleft {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	@extend .flow;
+}
+.alignnone {
+	margin: 0 0 $base-line-height + px 0;
+}
+@include at-least($bp-xs) {
+	.alignright {
+		float: right;
+		margin: 0 0 $base-line-height + px $base-line-height + px;
+		max-width: 60%;
+	}
+	.alignleft {
+		float: left;
+		margin: 0 $base-line-height + px $base-line-height + px 0;
+		max-width: 60%;
+	}
+}
+.wp-caption {
+	max-width: 100%;
+    img {
+		float: none;
+		margin: 0;
+	}
+	p.wp-caption-text {
+	    @include font-size($base-font-size - 3);
+	    line-height: 1.2;
+	    margin: 0;
+	}
+}

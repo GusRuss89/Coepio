@@ -1,0 +1,49 @@
+/**
+ * A few mixins used by the framework
+ */
+
+// Font size mixin
+@mixin font-size($sizeValue: 16) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+// Media queries (http://css-tricks.com/naming-media-queries/)
+@mixin at-least($device-width) {
+	@media screen and (min-width: $device-width) {
+		@content;
+	}
+}
+@mixin less-than($device-width) {
+	@media screen and (max-width: $device-width - 1) {
+		@content;
+	}
+}
+@mixin between($small-width, $large-width) {
+	@media screen and (min-width: $small-width) and (max-width: $large-width - 1) {
+		@content;
+	}
+}
+
+// Simple Gradients
+@mixin vertical-gradient($top: $default-gradient-top, $bottom: $default-gradient-bottom) {
+	background: $top;
+	@include background-image(linear-gradient($top, $bottom));
+}
+@mixin horizontal-gradient($left: $default-gradient-top, $right: $default-gradient-bottom) {
+	background: $left;
+	@include background-image(linear-gradient(left, $left, $right));
+}
+
+// No padding on last child
+@mixin no-padding-on-last-child() {
+	> :last-child {
+		margin-bottom: 0;
+		> :last-child {
+			margin-bottom: 0;
+			> :last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

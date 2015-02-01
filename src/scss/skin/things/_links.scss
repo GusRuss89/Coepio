@@ -1,0 +1,45 @@
+//
+// Links
+//
+
+// Regular, everyday, normal links
+a {
+	color: $link-colour;
+	text-decoration: none;
+	transition: color .2s linear;
+	&:hover,
+	&:active {
+		color: $link-hover-colour;
+		//text-decoration: underline;
+	}
+}
+
+// Feature links (delete if not required)
+.feature-link {
+	display: block;
+	font-weight: bold;
+	margin-top: -($base-line-height * 0.66) + px;
+	&:after {
+		content: "";
+		position: relative;
+		width: 0;
+		height: 0;
+		box-sizing: padding-box;
+		display: inline-block;
+		border: 5px solid transparent;
+		border-left-color: $link-colour;
+		margin-left: 5px;
+	}
+	&:hover {
+		&:after {
+			border-left-color: $link-hover-colour;
+		}
+	}
+}
+
+// Image links
+a.img-link {
+	&:hover {
+		opacity: 0.8;
+	}
+}
